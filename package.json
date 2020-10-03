@@ -1,0 +1,38 @@
+{
+  "name": "github-page-profile",
+  "version": "1.0.0",
+  "description": "My profile with Github Page and React",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack",
+    "watch": "webpack --watch",
+    "start": "webpack-dev-server --open",
+    "build-production": "webpack --mode production"
+  },
+  "author": "masterite1996",
+  "license": "ISC",
+  "private": true,
+  "dependencies": {
+    "immutable": "^4.0.0-rc.12",
+    "ramda": "^0.27.0",
+    "react": "^16.11.0",
+    "react-dom": "^16.13.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.6.4",
+    "@babel/preset-env": "^7.6.3",
+    "@babel/preset-react": "^7.6.3",
+    "babel-loader": "^8.0.6",
+    "clean-webpack-plugin": "^3.0.0",
+    "copy-webpack-plugin": "^5.1.1",
+    "css-loader": "^3.2.0",
+    "mini-css-extract-plugin": "^0.8.0",
+    "node-sass": "^4.13.1",
+    "sass-loader": "^8.0.0",
+    "webpack": "^4.41.2",
+    "webpack-cli": "^3.3.9",
+    "webpack-dev-server": "^3.11.0",
+    "webpack-fix-style-only-entries": "^0.4.0"
+  }
+}
