@@ -2,12 +2,22 @@
 
 import React from 'react'
 import ReactDOM from 'react-dom'
-import App from './component/app.jsx';
+import { Provider } from 'react-redux'
+import { HashRouter } from 'react-router-dom'
 
-function render()
-{
+import { store } from './store'
+
+import App from './component/App.jsx'
+
+function render() {
     ReactDOM.render(
-        <App />,
+        (
+            <Provider store={store}>
+                <HashRouter hashType="noslash">
+                    <App />
+                </HashRouter>
+            </Provider>
+        ),
         document.getElementById('app')
     )
 }
