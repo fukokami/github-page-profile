@@ -1,5 +1,4 @@
 'use strict';
 
 
-// TODO: remove
-export const ACTION_TEMPLATE = 'ACTION_TEMPLATE'
+export const SELECT_TAB = 'SELECT_TAB'

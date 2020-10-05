@@ -3,8 +3,8 @@
 
 import { combineReducers } from 'redux'
 
-import template from './reducers/template'
+import selectTab from './reducers/selectTab'
 
 export default combineReducers({
-    template
+    selectTab
 }); 

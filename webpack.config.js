@@ -11,7 +11,7 @@ module.exports = (env, args) => {
         mode: 'development',
         entry: {
             'index': './src/js/index.js',
-            'main.css': './src/sass/main.scss',
+            'main.css': './src/scss/main.scss',
         },
         module: {
             rules: [
