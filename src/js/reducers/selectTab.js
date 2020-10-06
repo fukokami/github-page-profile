@@ -4,7 +4,7 @@
 import { head, includes } from 'ramda'
 
 import { SELECT_TAB } from '../constants/actionTypes'
-import tabList from '../constants/local/tabList'
+import tabList from '../constants/tabList'
 
 
 const initTab = head(tabList)

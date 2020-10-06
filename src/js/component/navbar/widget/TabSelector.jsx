@@ -1,11 +1,11 @@
 'use strict';
 
-import { always, compose, concat, converge, equals, ifElse, path, prop } from 'ramda'
+import { always, equals, ifElse, path } from 'ramda'
 
 import React from 'react'
 import { useSelector } from 'react-redux';
 
-import tabList from '../../../constants/local/tabList'
+import tabList from '../../../constants/tabList'
 
 const appendClass =
     ifElse(

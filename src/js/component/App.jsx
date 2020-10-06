@@ -9,8 +9,8 @@ import { useLocation } from 'react-router-dom'
 
 import Navbar from './navbar/Navbar.jsx'
 
-import { selectTab } from '../constants/actionCreators'
-import { PROFILE, PROJECT, STORAGE } from '../constants/local/tabList'
+import { selectTab } from '../actions/selectTab'
+import { PROFILE, PROJECT, STORAGE } from '../constants/tabList'
 
 const selectTabAction = compose(
     selectTab,
