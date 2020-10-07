@@ -1,0 +1,18 @@
+{
+    "user": {
+        "name": "Fukokami",
+        "job": "Developer",
+        "social": [
+            {
+                "name": "facebook",
+                "icon": "fa fa-facebook-f",
+                "url": "https://www.facebook.com/thang96.it/"
+            },
+            {
+                "name": "github",
+                "icon": "fa fa-github-alt",
+                "url": "https://github.com/masterite1996"
+            }
+        ] 
+    }
+}

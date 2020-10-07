@@ -7,11 +7,11 @@ import { useSelector } from 'react-redux';
 
 import tabList from '../../../constants/tabList'
 
-const appendClass =
+const activeClass =
     ifElse(
         equals,
-        always("no-select active"),
-        always("no-select")
+        always("active"),
+        always("")
     )
 
 export default function TabSelector() {
@@ -24,7 +24,7 @@ export default function TabSelector() {
             tabList.map( tabName => {
                 return (
                     <a key={`tab-${tabName}`} href={`#${tabName}`}>
-                        <li className={ appendClass(currentTab, tabName) } > { tabName } </li>
+                        <li className={ activeClass(currentTab, tabName) } > { tabName } </li>
                     </a>
                 );  
             })
