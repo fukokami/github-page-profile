@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Poppins');
-
+@import '~aos/dist/aos.css';
 
 /* ===================VARIABLES=================== */
 
@@ -21,13 +21,7 @@ body {
 }
 
 .container {
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
   margin: 0 15%;
-  overflow: auto;
-  position: fixed;
 }
 
 @media screen and (max-width: 800px) {
@@ -37,3 +31,4 @@ body {
 }
 
 @import "navbar.scss";
+@import "project.scss";

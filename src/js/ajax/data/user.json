@@ -1,18 +1,70 @@
 {
-    "user": {
-        "name": "Fukokami",
-        "job": "Developer",
-        "social": [
-            {
-                "name": "facebook",
-                "icon": "fa fa-facebook-f",
-                "url": "https://www.facebook.com/thang96.it/"
-            },
-            {
-                "name": "github",
-                "icon": "fa fa-github-alt",
-                "url": "https://github.com/masterite1996"
-            }
-        ] 
+  "user": {
+    "name": "Fukokami",
+    "job": "Developer",
+    "social": [
+      {
+        "name": "facebook",
+        "icon": "fa fa-facebook-f",
+        "url": "https://www.facebook.com/thang96.it/"
+      },
+      {
+        "name": "github",
+        "icon": "fa fa-github-alt",
+        "url": "https://github.com/masterite1996"
+      }
+    ]
+  },
+  "project": [
+    {
+      "name": "name 1",
+      "badge": {
+        "name": "test1",
+        "text": "test1",
+        "color": "yellow",
+        "icon": "fa fa-bolt"
+      },
+      "card": {
+        "content": "content 1",
+        "start": "11/11/2019",
+        "end": "01/01/2020",
+        "icons": [
+          {
+            "name": "facebook",
+            "icon": "fab fa-facebook-f"
+          },
+          {
+            "name": "docker",
+            "icon": "fab fa-docker"
+          }
+        ],
+        "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Non similique voluptatum amet molestias voluptas nesciunt totam laboriosam odio delectus, animi numquam! Ut eos, minima perspiciatis adipisci nesciunt ratione odio aspernatur."
+      }
+    },
+    {
+      "name": "name 2",
+      "badge": {
+        "name": "test2",
+        "text": "test2",
+        "color": "blue",
+        "icon": "fa fa-anchor"
+      },
+      "card": {
+        "content": "content 2",
+        "start": "11/11/2019",
+        "end": "01/01/2020",
+        "icons": [
+          {
+            "name": "facebook",
+            "icon": "fab fa-facebook-f"
+          },
+          {
+            "name": "docker",
+            "icon": "fab fa-docker"
+          }
+        ],
+        "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Non similique voluptatum amet molestias voluptas nesciunt totam laboriosam odio delectus, animi numquam! Ut eos, minima perspiciatis adipisci nesciunt ratione odio aspernatur."
+      }
     }
+  ]
 }
