@@ -1,13 +1,13 @@
 'use strict';
 
 
-import { head, includes } from 'ramda'
+import { head, includes } from 'ramda';
 
-import { SELECT_TAB } from '../constants/actionTypes'
-import tabList from '../constants/tabList'
+import { SELECT_TAB } from '../constants/actionTypes';
+import tabList from '../constants/tabList';
 
 
-const initTab = head(tabList)
+const initTab = head(tabList);
 
 export default (state = { tab: initTab}, action) => {
     switch (action.type) {
@@ -15,8 +15,8 @@ export default (state = { tab: initTab}, action) => {
             return {
                 ...state,
                 tab: includes(action.data, tabList) ? action.data : initTab
-            }
+            };
         default:
-            return state
+            return state;
     }
-}
+};

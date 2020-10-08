@@ -22,11 +22,6 @@ $desc-bg-color: #d2fb7f;
     margin: 10px 0;
     display: flex;
     top: 0;
-    transition: all 0.2s ease;
-
-    &:hover {
-      top: -4px;
-    }
   }
 
   .reserve {

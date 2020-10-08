@@ -1,19 +1,19 @@
 'use strict';
 
 
-import React from 'react'
+import React from 'react';
 
 import { getUserInfo } from '../../../ajax/get-user-information';
 
 import getPropWithDefval from '../../../utils/get-prop-with-defval';
 
-const getName = getPropWithDefval('name', 'Unknown')
-const getJob = getPropWithDefval('job', 'Unknown')
-const getSocial = getPropWithDefval('social', [])
+const getName = getPropWithDefval('name', 'Unknown');
+const getJob = getPropWithDefval('job', 'Unknown');
+const getSocial = getPropWithDefval('social', []);
 
 export default function Avatar() {
 
-    const userInfo = getUserInfo()
+    const userInfo = getUserInfo();
 
     return (
         <div className="card-wrapper">
@@ -33,7 +33,7 @@ export default function Avatar() {
                                         <i className={item.icon}></i>
                                     </a>
                                 </li>
-                            )
+                            );
                         })
                     }
                 </ul>
@@ -44,5 +44,5 @@ export default function Avatar() {
                 </div>
             </div>
         </div>
-    )
+    );
 }

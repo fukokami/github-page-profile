@@ -5,7 +5,7 @@ const CopyPlugin = require('copy-webpack-plugin')
     , FixStyleOnlyEntriesPlugin = require('webpack-fix-style-only-entries')
     , { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
-module.exports = (env, args) => {
+module.exports = () => {
 
     return {
         mode: 'development',
@@ -62,5 +62,5 @@ module.exports = (env, args) => {
             }),
             new CleanWebpackPlugin(),
         ],
-    }
-}
+    };
+};

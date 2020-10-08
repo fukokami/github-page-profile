@@ -1,13 +1,13 @@
 'use strict';
 
-import React from 'react'
-import ReactDOM from 'react-dom'
-import { Provider } from 'react-redux'
-import { HashRouter } from 'react-router-dom'
+import React from 'react';
+import ReactDOM from 'react-dom';
+import { Provider } from 'react-redux';
+import { HashRouter } from 'react-router-dom';
 
-import { store } from './store'
+import { store } from './store';
 
-import App from './component/App.jsx'
+import App from './component/App.jsx';
 
 function render() {
     ReactDOM.render(
@@ -19,11 +19,11 @@ function render() {
             </Provider>
         ),
         document.getElementById('app')
-    )
+    );
 }
 
 async function main() {
-    render()
+    render();
 }
 
-main()
+main();
