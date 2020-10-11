@@ -1,0 +1,110 @@
+/* *** Storage *** */
+
+.storage {
+  .field {
+    margin: 2em 0;
+
+    .title-area {
+      padding: 0.3em;
+      background-color: $title-bg-color;
+      border-radius: $border-rad $border-rad 0 0;
+
+      .title {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+      }
+
+      .top {
+        display: flex;
+        justify-content: space-between;
+
+        p {
+          height: 2em;
+          line-height: 2em;
+          margin-left: 1em;
+        }
+
+        .more {
+          padding: 0.2em;
+          background-color: transparent;
+          position: relative;
+          border-color: transparent;
+          text-decoration: none;
+          color: black;
+
+          i {
+            border-radius: 50%;
+            background-color: white;
+            padding: 3px;
+            text-align: center;
+          }
+
+          &:active {
+            color: inherit;
+          }
+
+          &:focus {
+            outline: none !important;
+          }
+
+          &:hover {
+            filter: blur(0.6px);
+            text-shadow: 0 0 10px white, 0 0 20px white, 0 0 40px white, 0 0 80px white, 0 0 160px white;
+            color: red;
+
+          }
+        }
+      }
+    }
+
+    .box-area {
+      padding: 0.3em 0.5em;
+      background-color: $icon-bg-color;
+      display: flex;
+      flex-wrap: wrap;
+      border-radius: 0 0 $border-rad $border-rad;
+
+      .box {
+        flex-grow: 1;
+        width: 50%;
+
+        .content {
+          display: flex;
+          height: 6em;
+          margin: 0.5em;
+          padding: 0 0.3em;
+          background-color: $desc-bg-color;
+          border-radius: $border-rad;
+        }
+
+        .circle {
+          background-color: white;
+          border-radius: 50%;
+          width: 4em;
+          height: 4em;
+          line-height: 4em;
+          text-align: center;
+          margin: auto 0;
+        }
+
+        .description {
+          flex: 1;
+          padding: 0 0.5em;
+          text-align: justify;
+          height: 5em;
+          line-height: 1.6em;
+          margin: auto 0.5em;
+          background-color: white;
+          overflow: hidden;
+        }
+      }
+
+      @media screen and (max-width: 800px) {
+        .box {
+          width: 100%;
+        }
+      }
+    }
+  }
+}

@@ -6,7 +6,12 @@
 $primary-color: #ffeb3b;
 $secondary-color: #cddc39;
 $background-color: #fff9af;
+$title-bg-color: #a6a2d0;
+$icon-bg-color: #cadcaa;
+$desc-bg-color: #d2fb7f;
+
 $navbar-bg-img-height: 20em;
+$border-rad: 10px;
 
 /* =====================CLASS===================== */
 
@@ -32,3 +37,4 @@ body {
 
 @import "navbar.scss";
 @import "project.scss";
+@import "storage.scss";

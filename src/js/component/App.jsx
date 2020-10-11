@@ -11,6 +11,7 @@ import AOS from 'aos';
 
 import Navbar from './navbar/Navbar.jsx';
 import Project from './project/Project.jsx';
+import Storage from './storage/Storage.jsx';
 
 import { selectTab } from '../actions/selectTab';
 import { PROFILE, PROJECT, STORAGE } from '../constants/tabList';
@@ -51,8 +52,10 @@ export default function App() {
 
                 <Route exact path={`/${PROJECT}`} component={Project} />
 
-                <Route exact path={`/${STORAGE}`} >
-                    <div>Storage Content</div>
+                <Route exact path={`/${STORAGE}`} component={Storage} />
+
+                <Route exact path={`/${STORAGE}/:type`} >
+                    <div>Storage Content Type</div>
                 </Route>
 
                 <Route>
