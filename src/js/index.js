@@ -13,7 +13,7 @@ function render() {
     ReactDOM.render(
         (
             <Provider store={store}>
-                <HashRouter hashType="noslash">
+                <HashRouter>
                     <App />
                 </HashRouter>
             </Provider>

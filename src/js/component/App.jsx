@@ -1,11 +1,11 @@
 'use strict';
 
 
-import { always, compose, cond, equals, path, prop, replace, T } from 'ramda';
+import { compose, prop } from 'ramda';
 
 import React, { useEffect } from 'react';
-import { useSelector, useDispatch } from 'react-redux';
-import { useLocation } from 'react-router-dom';
+import { useDispatch } from 'react-redux';
+import { Route, Switch, useLocation } from 'react-router-dom';
 
 import AOS from 'aos';
 
@@ -17,24 +17,14 @@ import { PROFILE, PROJECT, STORAGE } from '../constants/tabList';
 
 const selectTabAction = compose(
     selectTab,
-    replace(/\//g, ''),
     prop('pathname'),
 );
 
-const renderMain =
-    cond([
-        [ equals(PROFILE), always(<div>Profile Content</div>)],
-        [ equals(PROJECT), always(<Project />)],
-        [ equals(STORAGE), always(<div>Storage Content</div>)],
-        [ T              , always(<div>404 Not Found</div>)]
-    ]);
 
 export default function App() {
 
     const location = useLocation();
     const dispatch = useDispatch();
-
-    const currentTab = useSelector(state => path( ['selectTab', 'tab'], state) );
 
     useEffect(() => {
         AOS.init({ delay: 200, duration: 700 });
@@ -49,9 +39,26 @@ export default function App() {
 
             <Navbar />
 
-            {
-                renderMain(currentTab)
-            }
+            <Switch>
+
+                <Route exact path="/">
+                    <div>Profile Content</div>
+                </Route>
+
+                <Route exact path={`/${PROFILE}`} >
+                    <div>Profile Content</div>
+                </Route>
+
+                <Route exact path={`/${PROJECT}`} component={Project} />
+
+                <Route exact path={`/${STORAGE}`} >
+                    <div>Storage Content</div>
+                </Route>
+
+                <Route>
+                    <div>404 Not Found</div>
+                </Route>
+            </Switch>
         </div>
     );
 }
