@@ -28,7 +28,7 @@ export default function Field({ field }) {
     return (
         <div className="field">
             <div className="title-area">
-                <Title title={`${title} (${listBox.length})`} />
+                <Title title={title} total={listBox.length} />
             </div>
             <div className="box-area">
                 {

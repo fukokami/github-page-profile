@@ -8,13 +8,13 @@ import { Link } from 'react-router-dom';
 
 import { STORAGE } from '../../../constants/tabList';
 
-export default function Title({ title }) {
+export default function Title({ title, total }) {
 
     const path = `/${STORAGE}/${toLower(title)}`;
     return (
         <div className="title">
             <div className="top">
-                <p>{title}</p>
+                <p>{`${title} (${total})`}</p>
 
                 <Link to={path} className="more">
                     More&nbsp;
@@ -27,5 +27,6 @@ export default function Title({ title }) {
 }
 
 Title.propTypes = {
-    title: PropTypes.string
+    title: PropTypes.string,
+    total: PropTypes.number
 };
