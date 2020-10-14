@@ -23,7 +23,7 @@ module.exports = () => {
                             loader: 'babel-loader',
                             options: {
                                 presets: [
-                                    ['@babel/preset-env',{
+                                    ['@babel/preset-env', {
                                         targets: {
                                             chrome: 75,
                                         }
@@ -44,6 +44,10 @@ module.exports = () => {
                         'sass-loader'
                     ]
                 },
+                {
+                    test: /\.ya?ml$/,
+                    use: 'js-yaml-loader',
+                }
             ],
         },
         output: {

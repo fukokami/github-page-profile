@@ -8,6 +8,11 @@ import PropTypes from 'prop-types';
 
 import getPropWithDefval from '../../../utils/get-prop-with-defval';
 
+const getId = item => {
+    const defval = Math.floor(Math.random() * 1000);
+
+    return getPropWithDefval('id', defval)(item);
+};
 const getContent = getPropWithDefval('content', 'Unknown');
 const getDate = compose(
     join(' → '),
@@ -26,7 +31,7 @@ const reserveClass =
         always('title')
     );
 
-export default function Card({ isReverse, name, card }) {
+export default function Card({ isReverse, id, card }) {
 
     const content = getContent(card);
     const date = getDate(card);
@@ -47,7 +52,7 @@ export default function Card({ isReverse, name, card }) {
                 {
                     icons.map(icon => {
                         return (
-                            <div key={`${name}-${icon.name}`} className="circle">
+                            <div key={`${id}-${getId(icon)}`} className="circle">
                                 <i className={icon.icon}></i>
                             </div>
                         );
@@ -61,6 +66,9 @@ export default function Card({ isReverse, name, card }) {
 
 Card.propTypes = {
     isReverse: PropTypes.bool,
-    name: PropTypes.string.isRequired,
+    id: PropTypes.oneOfType([
+        PropTypes.string.isRequired,
+        PropTypes.number.isRequired,
+    ]),
     card: PropTypes.object.isRequired
 };

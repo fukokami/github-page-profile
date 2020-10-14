@@ -1,0 +1,94 @@
+user:
+  name: Fukokami
+  job: Developer
+  social:
+    - id: social-fb
+      name: social facebook
+      icon: fa fa-facebook-f
+      url: https://www.facebook.com/thang96.it/
+    - id: social-github
+      name: social github
+      icon: fa fa-github-al
+      url: https://github.com/masterite1996"
+
+project:
+  - id: 1
+    name: name 1
+    badge:
+      text: test 1
+      color: yellow
+      icon: fa fa-bolt
+    card:
+      content: content 1
+      start: 11/11/2019
+      end: 01/01/2020
+      icons:
+        - id: project-fb-1
+          name: facebook
+          icon: fab fa-facebook-f
+        - id:  project-git-1
+          name: github
+          icon: fab fa-docker
+      description: Lorem ipsum dolor sit amet consectetur adipisicing elit. Non similique voluptatum amet molestias voluptas nesciunt totam laboriosam odio delectus, animi numquam! Ut eos, minima perspiciatis adipisci nesciunt ratione odio aspernatur.
+
+  - id: 2
+    name: name 2
+    badge:
+      text: test 2
+      color: blue
+      icon: fa fa-anchor
+    card:
+      content: content 2
+      start: 11/11/2019
+      end: 01/01/2020
+      icons:
+        - id: project-fb-2
+          name: facebook
+          icon: fab fa-facebook-f
+        - id:  project-git-2
+          name: github
+          icon: fab fa-docker
+      description: Lorem ipsum dolor sit amet consectetur adipisicing elit. Non similique voluptatum amet molestias voluptas nesciunt totam laboriosam odio delectus, animi numquam! Ut eos, minima perspiciatis adipisci nesciunt ratione odio aspernatur.
+
+storage:
+  - id: 1
+    name: docker
+    title: Docker
+    list-box:
+      - id: docker-1
+        name: d1
+        icon: fa fa-facebook-f
+        description: 1 Lorem ipsum dolor sit amet consectetur adipisicing elit. Non similique voluptatum amet molestias voluptas nesciunt totam laboriosam odio delectus, animi numquam! Ut eos, minima perspiciatis adipisci nesciunt ratione odio aspernatur.
+      - id: docker-2
+        name: d2
+        icon: fa fa-facebook-f
+        description: 2 Lorem ipsum dolor sit amet consectetur adipisicing elit. Non similique voluptatum amet molestias voluptas nesciunt totam laboriosam odio delectus, animi numquam! Ut eos, minima perspiciatis adipisci nesciunt ratione odio aspernatur.
+      - id: docker-3
+        name: d3
+        icon: fa fa-facebook-f
+        description: 3 Lorem ipsum dolor sit amet consectetur adipisicing elit. Non similique voluptatum amet molestias voluptas nesciunt totam laboriosam odio delectus, animi numquam! Ut eos, minima perspiciatis adipisci nesciunt ratione odio aspernatur.
+      - id: docker-4
+        name: d4
+        icon: fa fa-facebook-f
+        description: 4 Lorem ipsum dolor sit amet consectetur adipisicing elit. Non similique voluptatum amet molestias voluptas nesciunt totam laboriosam odio delectus, animi numquam! Ut eos, minima perspiciatis adipisci nesciunt ratione odio aspernatur.
+  
+  - id: 2
+    name: npm
+    title: NPM
+    list-box:
+      - id: npm-1
+        name: n1
+        icon: fa fa-facebook-f
+        description: 1 Lorem ipsum dolor sit amet consectetur adipisicing elit. Non similique voluptatum amet molestias voluptas nesciunt totam laboriosam odio delectus, animi numquam! Ut eos, minima perspiciatis adipisci nesciunt ratione odio aspernatur.
+      - id: npm-2
+        name: n2
+        icon: fa fa-facebook-f
+        description: 2 Lorem ipsum dolor sit amet consectetur adipisicing elit. Non similique voluptatum amet molestias voluptas nesciunt totam laboriosam odio delectus, animi numquam! Ut eos, minima perspiciatis adipisci nesciunt ratione odio aspernatur.
+      - id: npm-3
+        name: n3
+        icon: fa fa-facebook-f
+        description: 3 Lorem ipsum dolor sit amet consectetur adipisicing elit. Non similique voluptatum amet molestias voluptas nesciunt totam laboriosam odio delectus, animi numquam! Ut eos, minima perspiciatis adipisci nesciunt ratione odio aspernatur.
+      - id: npm-4
+        name: n4
+        icon: fa fa-facebook-f
+        description: 4 Lorem ipsum dolor sit amet consectetur adipisicing elit. Non similique voluptatum amet molestias voluptas nesciunt totam laboriosam odio delectus, animi numquam! Ut eos, minima perspiciatis adipisci nesciunt ratione odio aspernatur.

@@ -3,7 +3,7 @@
 
 import React from 'react';
 
-import { getUserInfo } from '../../../ajax/get-user-information';
+import getUserInfo from '../../../ajax/get-user-info';
 
 import getPropWithDefval from '../../../utils/get-prop-with-defval';
 
@@ -39,8 +39,8 @@ export default function Avatar() {
                 </ul>
 
                 <div className="details">
-                    <h3>{ getName(userInfo) }</h3>
-                    <div className="job-title">{ getJob(userInfo) }</div>
+                    <h3>{getName(userInfo)}</h3>
+                    <div className="job-title">{getJob(userInfo)}</div>
                 </div>
             </div>
         </div>

@@ -1,0 +1,38 @@
+user:
+  name:
+  job:
+  social:
+    - id:
+      name: 
+      icon:
+      url:
+
+project:
+  - id:
+    name:
+    badge:
+      text:
+      color:
+      icon:
+    card:
+      content:
+      start:
+      end:
+      icons:
+        - id:
+          name:
+          icon:
+      description:
+
+storage:
+  - id:
+    name:
+    title:
+    list-box:
+      - id:
+        name:
+        icon:
+        description:
+
+
+    
