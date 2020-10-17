@@ -8,8 +8,132 @@ user:
       url: https://www.facebook.com/thang96.it/
     - id: social-github
       name: social github
-      icon: fa fa-github-al
+      icon: fa fa-github-alt
       url: https://github.com/masterite1996"
+
+profile:
+  info:
+    header: Info
+    bloc:
+      - id: 11
+        bloc_header: Information 
+        frame:
+          - id: 111
+            frame_header: Name
+            class_size: half
+            icon: fa fa-user
+            value: Fukokami
+          - id: 112
+            frame_header: Age
+            class_size: half
+            icon: fa fa-birthday-cake
+            value: 24
+          - id: 113
+            frame_header: Phone
+            class_size: half
+            icon: fa fa-phone
+            value: +84 (0)398 xxx x96
+          - id: 114
+            frame_header: Email
+            class_size: half
+            icon: fa fa-envelope
+            value: do••••••••••ng.cntt@gmail.com
+      - id: 12
+        bloc_header: Education
+        frame:
+          - id: 121
+            frame_header: University ( 2015 - 2019 )
+            class_size: full
+            icon: fa fa-school  
+            value: Ho Chi Minh City University of Technology and Education
+          - id: 122
+            frame_header: Degree
+            class_size: full
+            icon: fa fa-graduation-cap
+            value: 'In 2019: Information Technology Engineer'
+      - id: 13
+        bloc_header: Summary
+        frame:
+          - id: 131
+            frame_header: Hobby
+            class_size: full
+            icon: fa fa-anchor
+            value: Read Lightnovel, Manga, Anime,...
+
+  skill:
+    header: Skill
+    bloc:
+      - id: 21
+        type: badge
+        bloc_header: Programing Language
+        frame:
+          - id: 211
+            name: nodeJS
+            color: node
+            type: icon
+            icon: fab fa-node
+          - id: 212
+            name: php
+            color: php
+            type: icon
+            icon: fab fa-php
+          - id: 213
+            name: reactJS
+            color: react
+            type: icon
+            icon: fab fa-react
+          - id: 214
+            name: android
+            color: android
+            type: icon
+            icon: fab fa-android
+      - id: 22
+        type: evaluate
+        bloc_header: Languages
+        frame:
+          - id: 221
+            value: English
+            evaluate:
+              - id: 2211
+                title: Read
+                point: 3
+              - id: 2212
+                title: Listen
+                point: 2
+              - id: 2213
+                title: Write
+                point: 1
+          - id: 222
+            value: Japanese
+            evaluate:
+              - id: 2211
+                title: Read
+                point: 0
+              - id: 2212
+                title: Listen
+                point: 0
+              - id: 2213
+                title: Write
+                point: 0
+      - id: 23
+        type: badge
+        bloc_header: Other
+        frame:
+          - id: 231
+            name: aws
+            color: aws
+            type: icon
+            icon: fab fa-aws
+          - id: 232
+            name: git
+            color: git
+            type: icon
+            icon: fab fa-git
+          - id: 233
+            name: github
+            color: github
+            type: icon
+            icon: fab fa-github-square
 
 project:
   - id: 1

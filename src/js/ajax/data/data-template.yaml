@@ -7,6 +7,37 @@ user:
       icon:
       url:
 
+profile:
+  info:
+    header:
+    bloc:
+      - id:
+        bloc_header:
+        frame:
+          - id:
+            frame_header:
+            class_size:
+            icon: 
+            value:
+  skill:
+    header:
+    bloc:
+      - id:
+        type:
+        bloc_header:
+        frame:
+        - id:
+          name:
+          type:
+          icon:
+          image:
+        - id:
+          value:
+          evaluate:
+            - id:
+              title:
+              point:
+
 project:
   - id:
     name:

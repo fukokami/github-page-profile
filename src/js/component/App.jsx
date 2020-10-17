@@ -10,6 +10,7 @@ import { Route, Switch, useLocation } from 'react-router-dom';
 import AOS from 'aos';
 
 import Navbar from './navbar/Navbar.jsx';
+import Profile from './profile/Profile.jsx';
 import Project from './project/Project.jsx';
 import Storage from './storage/Storage.jsx';
 
@@ -42,13 +43,9 @@ export default function App() {
 
             <Switch>
 
-                <Route exact path="/">
-                    <div>Profile Content</div>
-                </Route>
+                <Route exact path="/" component={Profile} />
 
-                <Route exact path={`/${PROFILE}`} >
-                    <div>Profile Content</div>
-                </Route>
+                <Route exact path={`/${PROFILE}`} component={Profile} />
 
                 <Route exact path={`/${PROJECT}`} component={Project} />
 

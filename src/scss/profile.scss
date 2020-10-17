@@ -1,0 +1,242 @@
+/* *** Profile *** */
+
+@mixin margin-auto {
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+}
+
+.profile {
+  h2 {
+    margin: 0.5em 0;
+  }
+
+  .content {
+    background: #e6e2c8;
+    width: 80%;
+    max-width: 960px;
+    min-height: 3.75em;
+    margin: 2em auto;
+    padding: 1.25em;
+    border-radius: 0.313em;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.5);
+    line-height: 1.5em;
+    color: #292929;
+  }
+
+  .ribbon {
+    position: relative;
+    padding: 0 0.5em;
+    font-size: 2em;
+    margin: 0 0 0 -0.625em;
+    line-height: 1.875em;
+    color: #e6e2c8;
+    border-radius: 0 0.156em 0.156em 0;
+    background: rgb(123, 159, 199);
+    box-shadow: -1px 2px 3px rgba(0, 0, 0, 0.5);
+
+    &:before,
+    &:after {
+      position: absolute;
+      content: "";
+      display: block;
+    }
+
+    &:before {
+      width: 0.469em;
+      height: 100%;
+      padding: 0 0 0.438em;
+      top: 0;
+      left: -0.469em;
+      background: inherit;
+      border-radius: 0.313em 0 0 0.313em;
+    }
+
+    &:after {
+      width: 0.313em;
+      height: 0.313em;
+      background: rgba(0, 0, 0, 0.35);
+      bottom: -0.313em;
+      left: -0.313em;
+      border-radius: 0.313em 0 0 0.313em;
+      box-shadow: inset -1px 2px 2px rgba(0, 0, 0, 0.3);
+    }
+  }
+
+  .info {
+    .bloc {
+      display: flex;
+      flex-wrap: wrap;
+
+      .frame {
+        flex-grow: 1;
+        display: flex;
+
+        &.trifurcate {
+          width: 33.33%;
+        }
+
+        &.half {
+          width: 50%;
+        }
+
+        &.full {
+          width: 100%;
+        }
+      }
+
+      .reserve {
+        flex-direction: row-reverse;
+
+        .left {
+          text-align: end;
+        }
+      }
+
+      .right {
+        width: 3em;
+        height: 3em;
+        padding: 0.5em;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        i.fa,
+        i.fab {
+          background: white;
+          border-radius: 50%;
+          border: 3px double black;
+          padding: 0.7em;
+        }
+      }
+
+      .left {
+        padding: 0.5em;
+      }
+    }
+  }
+
+  .skill {
+    .badge-area {
+      margin: 1em auto;
+      text-align: center;
+
+      .badge {
+        position: relative;
+        margin: 0 1.2em;
+        width: 2em;
+        height: 3.5em;
+        display: inline-block;
+        background: black;
+        color: white;
+        transform: rotate(30deg);
+
+        &.node:hover {
+          background: linear-gradient(to bottom right, #6cbc40 0%, #3c823b 100%);
+        }
+        &.php:hover {
+          background-color: #697ab1;
+        }
+        &.react:hover {
+          background-color: #5ed3f3;
+        }
+        &.android:hover {
+          background-color: #30d780;
+        }
+        &.aws:hover {
+          background-color: #061a2d;
+        }
+        &.git:hover {
+          background-color: #e94e31;
+        }
+        &.github:hover {
+          background-color: #302f2f;
+        }
+
+        &:before,
+        &:after {
+          position: absolute;
+          width: inherit;
+          height: inherit;
+          border-radius: inherit;
+          background: inherit;
+          content: "";
+          @include margin-auto;
+        }
+        &:before {
+          transform: rotate(60deg);
+        }
+        &:after {
+          transform: rotate(-60deg);
+        }
+        span {
+          position: absolute;
+          z-index: 10;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          @include margin-auto;
+
+          i.fa,
+          i.fab {
+            display: inline-block;
+            font-size: 2em;
+            transform: rotate(-30deg);
+          }
+        }
+      }
+    }
+
+    .evaluate-area {
+      display: flex;
+      flex-wrap: wrap;
+
+      .evaluate {
+        flex-grow: 1;
+        display: flex;
+        width: 50%;
+      }
+
+      p {
+        display: flex;
+        align-items: center;
+        padding-right: 0.5em;
+        margin-right: 0.5em;
+        font-weight: 800;
+        font-size: large;
+        border-right: 3px double black;
+      }
+
+      .point {
+        display: flex;
+        flex-direction: column;
+
+        p {
+          font-weight: 200;
+          display: inline-block;
+          min-width: 3em;
+          border: none;
+        }
+
+        i {
+          color: black;
+          padding: 0 0.15em;
+
+          &:hover {
+            zoom: 1.2;
+          }
+        }
+      }
+
+      .reserve {
+        flex-direction: row-reverse;
+
+        p {
+          padding-left: 1em;
+        }
+      }
+    }
+  }
+}

@@ -31,13 +31,13 @@ export default function Row({ item, isReverse }) {
 
     return isReverse
         ? (
-            <div data-aos="fade-up-left" className="row reserve">
+            <div className="row reserve">
                 <Badge badge={badge} />
                 <Card isReverse id={id} card={card} />
             </div>
         )
         : (
-            <div data-aos="fade-up-right" className="row">
+            <div className="row">
                 <Badge badge={badge} />
                 <Card id={id} card={card} />
             </div>

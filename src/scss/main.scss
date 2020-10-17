@@ -1,5 +1,5 @@
-@import url('https://fonts.googleapis.com/css?family=Poppins');
-@import '~aos/dist/aos.css';
+@import url("https://fonts.googleapis.com/css?family=Poppins");
+@import "~aos/dist/aos.css";
 
 /* ===================VARIABLES=================== */
 
@@ -22,19 +22,20 @@ $border-rad: 10px;
 
 body {
   background: $background-color;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 
 .container {
   margin: 0 15%;
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 1000px) {
   .container {
     margin: 0;
   }
 }
 
 @import "navbar.scss";
+@import "profile.scss";
 @import "project.scss";
 @import "storage.scss";
