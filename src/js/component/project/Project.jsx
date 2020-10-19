@@ -22,8 +22,8 @@ export default function Project() {
     return (
         <div className="project">
             {
-                userProject.map((item, index) => {
-                    return <Row key={getId(item)} item={item} isReverse={index % 2 !== 0} />;
+                userProject.map(item => {
+                    return <Row key={getId(item)} item={item} />;
                 })
             }
         </div>

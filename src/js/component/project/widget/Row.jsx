@@ -1,50 +1,45 @@
 'use strict';
 
 
-import { isNil, or, prop } from 'ramda';
+import { compose, join, juxt } from 'ramda';
 
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import Badge from './Badge.jsx';
-import Card from './Card.jsx';
+import Icons from './Icons.jsx';
 
-import getPropWithDefval from '../../../utils/get-prop-with-defval';
+import getPathWithDefval from '../../../utils/get-path-with-defval';
 
+const getStyleIcon = getPathWithDefval(['style', 'icon'], 'fa fa-question');
 
-const getId = item => {
-    const defval = Math.floor(Math.random() * 1000);
+const getCardTitle = getPathWithDefval(['card', 'title'], 'Unknown');
+const getCardDate = compose(
+    join(' → '),
+    juxt([
+        getPathWithDefval(['card', 'start'], '???'),
+        getPathWithDefval(['card', 'end'], '???')
+    ])
+);
+const getCardIcons = getPathWithDefval(['card', 'icons'], []);
+const getCardDescription = getPathWithDefval(['card', 'description'], 'Nothing...');
 
-    return getPropWithDefval('id', defval)(item);
-};
-const getBadge = prop('badge');
-const getCard = prop('card');
+export default function Row({ item }) {
 
-export default function Row({ item, isReverse }) {
-
-    const id = getId(item);
-    const badge = getBadge(item);
-    const card = getCard(item);
-
-    if (or(isNil(badge), isNil(card)))
-        return null;
-
-    return isReverse
-        ? (
-            <div className="row reserve">
-                <Badge badge={badge} />
-                <Card isReverse id={id} card={card} />
+    return (
+        <div className="timeline">
+            <div className="timeline-content">
+                <span className="timeline-year">{getCardDate(item)}</span>
+                <div className="timeline-icon">
+                    <i className={getStyleIcon(item)}></i>
+                </div>
+                <h3>{getCardTitle(item)}</h3>
+                <Icons iconList={getCardIcons(item)} />
+                <p>{getCardDescription(item)}</p>
             </div>
-        )
-        : (
-            <div className="row">
-                <Badge badge={badge} />
-                <Card id={id} card={card} />
-            </div>
-        );
+        </div>
+    );
 }
 
 Row.propTypes = {
     item: PropTypes.object.isRequired,
-    isReverse: PropTypes.bool
 };

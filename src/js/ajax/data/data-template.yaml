@@ -41,12 +41,11 @@ profile:
 project:
   - id:
     name:
-    badge:
-      text:
+    style:
       color:
       icon:
     card:
-      content:
+      title:
       start:
       end:
       icons:

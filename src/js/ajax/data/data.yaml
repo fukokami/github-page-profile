@@ -138,12 +138,11 @@ profile:
 project:
   - id: 1
     name: name 1
-    badge:
-      text: test 1
+    style:
       color: yellow
       icon: fa fa-bolt
     card:
-      content: content 1
+      title: content 1
       start: 11/11/2019
       end: 01/01/2020
       icons:
@@ -157,12 +156,11 @@ project:
 
   - id: 2
     name: name 2
-    badge:
-      text: test 2
+    style:
       color: blue
       icon: fa fa-anchor
     card:
-      content: content 2
+      title: content 2
       start: 11/11/2019
       end: 01/01/2020
       icons:
