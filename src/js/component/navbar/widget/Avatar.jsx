@@ -29,7 +29,7 @@ export default function Avatar() {
                         getSocial(userInfo).map(item => {
                             return (
                                 <li key={`social-${item.name}`}>
-                                    <a href={item.url} target="_blank" rel="noopener noreferrer">
+                                    <a href={item.url} target="_blank" rel="noopener noreferrer" tabIndex="-1">
                                         <i className={item.icon}></i>
                                     </a>
                                 </li>
