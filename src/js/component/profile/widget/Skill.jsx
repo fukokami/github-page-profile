@@ -4,7 +4,7 @@
 import { always, cond, propEq, T } from 'ramda';
 
 import React from 'react';
-import PropTypes from 'prop-types';
+import { array } from 'prop-types';
 
 import Badge from './skill/Badge.jsx';
 import Evaluate from './skill/Evaluate.jsx';
@@ -46,5 +46,5 @@ export default function Skill({ skillList }) {
 }
 
 Skill.propTypes = {
-    skillList: PropTypes.array
+    skillList: array
 };

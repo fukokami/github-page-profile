@@ -3,7 +3,7 @@
 import { range } from 'ramda';
 
 import React from 'react';
-import PropTypes from 'prop-types';
+import { array } from 'prop-types';
 
 import getPropWithDefval from '../../../../utils/get-prop-with-defval';
 
@@ -66,5 +66,5 @@ export default function Evaluate({ evaluateList }) {
 }
 
 Evaluate.propTypes = {
-    evaluateList: PropTypes.array
+    evaluateList: array
 };

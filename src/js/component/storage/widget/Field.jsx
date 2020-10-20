@@ -3,7 +3,7 @@
 import { isEmpty, take } from 'ramda';
 
 import React from 'react';
-import PropTypes from 'prop-types';
+import { object } from 'prop-types';
 
 import Title from './Title.jsx';
 import Box from './Box.jsx';
@@ -46,5 +46,5 @@ export default function Field({ field }) {
 }
 
 Field.propTypes = {
-    field: PropTypes.object
+    field: object
 };

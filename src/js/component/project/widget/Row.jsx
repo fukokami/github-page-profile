@@ -4,7 +4,7 @@
 import { compose, join, juxt } from 'ramda';
 
 import React from 'react';
-import PropTypes from 'prop-types';
+import { object } from 'prop-types';
 
 import Icons from './Icons.jsx';
 
@@ -41,5 +41,5 @@ export default function Row({ item }) {
 }
 
 Row.propTypes = {
-    item: PropTypes.object.isRequired,
+    item: object.isRequired,
 };

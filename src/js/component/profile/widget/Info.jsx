@@ -2,7 +2,7 @@
 
 
 import React from 'react';
-import PropTypes from 'prop-types';
+import { array } from 'prop-types';
 
 import Frame from './info/Frame.jsx';
 
@@ -46,5 +46,5 @@ export default function Info({ infoList }) {
 }
 
 Info.propTypes = {
-    infoList: PropTypes.array
+    infoList: array
 };

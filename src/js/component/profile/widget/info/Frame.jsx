@@ -3,7 +3,7 @@
 import { all, always, compose, concat, converge, identity, ifElse, isNil, join, prop, unapply } from 'ramda';
 
 import React from 'react';
-import PropTypes from 'prop-types';
+import { bool, object } from 'prop-types';
 
 
 import getPropWithDefval from '../../../../utils/get-prop-with-defval';
@@ -63,6 +63,6 @@ export default function Frame({ isReserve, frame }) {
 }
 
 Frame.propTypes = {
-    isReserve: PropTypes.bool,
-    frame: PropTypes.object
+    isReserve: bool,
+    frame: object
 };

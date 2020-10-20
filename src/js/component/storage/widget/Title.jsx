@@ -3,7 +3,7 @@
 import { toLower } from 'ramda';
 
 import React from 'react';
-import PropTypes from 'prop-types';
+import { string, number } from 'prop-types';
 import { Link } from 'react-router-dom';
 
 import { STORAGE } from '../../../constants/tabList';
@@ -27,6 +27,6 @@ export default function Title({ title, total }) {
 }
 
 Title.propTypes = {
-    title: PropTypes.string,
-    total: PropTypes.number
+    title: string,
+    total: number
 };

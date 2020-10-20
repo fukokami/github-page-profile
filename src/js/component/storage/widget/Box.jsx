@@ -1,7 +1,7 @@
 'use strict';
 
 import React from 'react';
-import PropTypes from 'prop-types';
+import { object } from 'prop-types';
 
 import Circle from './Circle.jsx';
 
@@ -12,7 +12,7 @@ export default function Box({ box }) {
             <div className="content">
                 <Circle />
                 <div className="description">
-                   { box.description }
+                    {box.description}
                 </div>
             </div>
         </div>
@@ -20,5 +20,5 @@ export default function Box({ box }) {
 }
 
 Box.propTypes = {
-    box: PropTypes.object
+    box: object
 };

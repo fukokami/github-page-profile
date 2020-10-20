@@ -3,7 +3,7 @@
 import { always, compose, concat, cond, identity, ifElse, join, prop, propEq, T } from 'ramda';
 
 import React from 'react';
-import PropTypes from 'prop-types';
+import { array } from 'prop-types';
 
 import getPropWithDefval from '../../../../utils/get-prop-with-defval';
 
@@ -63,5 +63,5 @@ export default function Badge({ badgeList }) {
 }
 
 Badge.propTypes = {
-    badgeList: PropTypes.array
+    badgeList: array
 };

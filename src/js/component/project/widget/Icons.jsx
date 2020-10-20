@@ -2,7 +2,7 @@
 
 
 import React from 'react';
-import PropTypes from 'prop-types';
+import { array } from 'prop-types';
 
 import getPropWithDefval from '../../../utils/get-prop-with-defval';
 
@@ -32,5 +32,5 @@ export default function Icons({ iconList }) {
 }
 
 Icons.propTypes = {
-    iconList: PropTypes.array
+    iconList: array
 };
