@@ -50,9 +50,11 @@ module.exports = () => {
                 }
             ],
         },
+        devtool: 'source-map',
         output: {
             path: `${__dirname}/dist`,
             filename: 'js/[name].js',
+            sourceMapFilename: 'map/[name].js.map',
         },
         plugins: [
             new CopyPlugin([
@@ -64,7 +66,9 @@ module.exports = () => {
             new MiniCssExtractPlugin({
                 filename: 'css/[name]',
             }),
-            new CleanWebpackPlugin(),
+            new CleanWebpackPlugin({
+                cleanStaleWebpackAssets: false,
+            }),
         ],
     };
 };
