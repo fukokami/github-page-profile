@@ -58,10 +58,13 @@ storage:
   - id:
     name:
     title:
+    description:
+    icon:
     list-box:
       - id:
         name:
         icon:
+        title:
         description:
 
 

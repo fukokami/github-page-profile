@@ -17,19 +17,19 @@ const activeClass =
 
 export default function TabSelector() {
 
-    const currentPath = useSelector(state => path( ['selectTab', 'tab'], state) );
+    const currentTab = useSelector(state => path(['selectTab', 'tab'], state));
 
     return (
         <ul className="menu-bar">
-        {
-            tabList.map( tabName => {
-                return (
-                    <a key={`tab-${tabName}`} href={`#${tabName}`}>
-                        <li className={ activeClass(tabName, currentPath) } > { tabName } </li>
-                    </a>
-                );  
-            })
-        }
+            {
+                tabList.map(tabName => {
+                    return (
+                        <a key={`tab-${tabName}`} href={`#${tabName}`}>
+                            <li className={activeClass(tabName, currentTab)} > {tabName} </li>
+                        </a>
+                    );
+                })
+            }
         </ul>
 
     );

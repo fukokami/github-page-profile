@@ -9,14 +9,14 @@ user:
     - id: social-github
       name: social github
       icon: fa fa-github-alt
-      url: https://github.com/masterite1996"
+      url: https://github.com/masterite1996
 
 profile:
   info:
     header: Info
     bloc:
       - id: 11
-        bloc_header: Information 
+        bloc_header: Information
         frame:
           - id: 111
             frame_header: Name
@@ -44,13 +44,13 @@ profile:
           - id: 121
             frame_header: University ( 2015 - 2019 )
             class_size: full
-            icon: fa fa-school  
+            icon: fa fa-school
             value: Ho Chi Minh City University of Technology and Education
           - id: 122
             frame_header: Degree
             class_size: full
             icon: fa fa-graduation-cap
-            value: 'In 2019: Information Technology Engineer'
+            value: "In 2019: Information Technology Engineer"
       - id: 13
         bloc_header: Summary
         frame:
@@ -149,7 +149,7 @@ project:
         - id: project-fb-1
           name: facebook
           icon: fab fa-facebook-f
-        - id:  project-git-1
+        - id: project-git-1
           name: github
           icon: fab fa-docker
       description: Lorem ipsum dolor sit amet consectetur adipisicing elit. Non similique voluptatum amet molestias voluptas nesciunt totam laboriosam odio delectus, animi numquam! Ut eos, minima perspiciatis adipisci nesciunt ratione odio aspernatur.
@@ -167,7 +167,7 @@ project:
         - id: project-fb-2
           name: facebook
           icon: fab fa-facebook-f
-        - id:  project-git-2
+        - id: project-git-2
           name: github
           icon: fab fa-docker
       description: Lorem ipsum dolor sit amet consectetur adipisicing elit. Non similique voluptatum amet molestias voluptas nesciunt totam laboriosam odio delectus, animi numquam! Ut eos, minima perspiciatis adipisci nesciunt ratione odio aspernatur.
@@ -176,41 +176,107 @@ storage:
   - id: 1
     name: docker
     title: Docker
+    description: Lorem ipsum dolor sit amet consectetur adipisicing elit. Non similique voluptatum amet molestias voluptas nesciunt totam laboriosam odio delectus, animi numquam! Ut eos, minima perspiciatis adipisci nesciunt ratione odio aspernatur.
+    icon: fab fa-docker
     list-box:
       - id: docker-1
         name: d1
-        icon: fa fa-facebook-f
-        description: 1 Lorem ipsum dolor sit amet consectetur adipisicing elit. Non similique voluptatum amet molestias voluptas nesciunt totam laboriosam odio delectus, animi numquam! Ut eos, minima perspiciatis adipisci nesciunt ratione odio aspernatur.
+        icon: fab fa-docker
+        title: 1 Title
+        description: Lorem ipsum dolor sit amet consectetur adipisicing elit. Non similique voluptatum amet molestias voluptas nesciunt totam laboriosam odio delectus, animi numquam! Ut eos, minima perspiciatis adipisci nesciunt ratione odio aspernatur. 
       - id: docker-2
         name: d2
-        icon: fa fa-facebook-f
-        description: 2 Lorem ipsum dolor sit amet consectetur adipisicing elit. Non similique voluptatum amet molestias voluptas nesciunt totam laboriosam odio delectus, animi numquam! Ut eos, minima perspiciatis adipisci nesciunt ratione odio aspernatur.
+        icon: fab fa-docker
+        title: 2 Title
+        description: Lorem ipsum dolor sit amet consectetur adipisicing elit. Non similique voluptatum amet molestias voluptas nesciunt totam laboriosam odio delectus, animi numquam! Ut eos, minima perspiciatis adipisci nesciunt ratione odio aspernatur. 
       - id: docker-3
         name: d3
-        icon: fa fa-facebook-f
-        description: 3 Lorem ipsum dolor sit amet consectetur adipisicing elit. Non similique voluptatum amet molestias voluptas nesciunt totam laboriosam odio delectus, animi numquam! Ut eos, minima perspiciatis adipisci nesciunt ratione odio aspernatur.
+        icon: fab fa-docker
+        title: 3 Title
+        description: Lorem ipsum dolor sit amet consectetur adipisicing elit. Non similique voluptatum amet molestias voluptas nesciunt totam laboriosam odio delectus, animi numquam! Ut eos, minima perspiciatis adipisci nesciunt ratione odio aspernatur.
       - id: docker-4
         name: d4
-        icon: fa fa-facebook-f
-        description: 4 Lorem ipsum dolor sit amet consectetur adipisicing elit. Non similique voluptatum amet molestias voluptas nesciunt totam laboriosam odio delectus, animi numquam! Ut eos, minima perspiciatis adipisci nesciunt ratione odio aspernatur.
-  
+        icon: fab fa-docker
+        title: 4 Title
+        description: Lorem ipsum dolor sit amet consectetur adipisicing elit. Non similique voluptatum amet molestias voluptas nesciunt totam laboriosam odio delectus, animi numquam! Ut eos, minima perspiciatis adipisci nesciunt ratione odio aspernatur.
+
   - id: 2
     name: npm
     title: NPM
+    description: Lorem ipsum dolor sit amet consectetur adipisicing elit. Non similique voluptatum amet molestias voluptas nesciunt totam laboriosam odio delectus, animi numquam! Ut eos, minima perspiciatis adipisci nesciunt ratione odio aspernatur.
+    icon: fab fa-npm
     list-box:
       - id: npm-1
         name: n1
-        icon: fa fa-facebook-f
-        description: 1 Lorem ipsum dolor sit amet consectetur adipisicing elit. Non similique voluptatum amet molestias voluptas nesciunt totam laboriosam odio delectus, animi numquam! Ut eos, minima perspiciatis adipisci nesciunt ratione odio aspernatur.
+        icon: fab fa-npm
+        title: 1 Title
+        description: Lorem ipsum dolor sit amet consectetur adipisicing elit. Non similique voluptatum amet molestias voluptas nesciunt totam laboriosam odio delectus, animi numquam! Ut eos, minima perspiciatis adipisci nesciunt ratione odio aspernatur.
       - id: npm-2
         name: n2
-        icon: fa fa-facebook-f
-        description: 2 Lorem ipsum dolor sit amet consectetur adipisicing elit. Non similique voluptatum amet molestias voluptas nesciunt totam laboriosam odio delectus, animi numquam! Ut eos, minima perspiciatis adipisci nesciunt ratione odio aspernatur.
+        icon: fab fa-npm
+        title: 2 Title
+        description: Lorem ipsum dolor sit amet consectetur adipisicing elit. Non similique voluptatum amet molestias voluptas nesciunt totam laboriosam odio delectus, animi numquam! Ut eos, minima perspiciatis adipisci nesciunt ratione odio aspernatur.
       - id: npm-3
         name: n3
-        icon: fa fa-facebook-f
-        description: 3 Lorem ipsum dolor sit amet consectetur adipisicing elit. Non similique voluptatum amet molestias voluptas nesciunt totam laboriosam odio delectus, animi numquam! Ut eos, minima perspiciatis adipisci nesciunt ratione odio aspernatur.
+        icon: fab fa-npm
+        title: 3 Title
+        description: Lorem ipsum dolor sit amet consectetur adipisicing elit. Non similique voluptatum amet molestias voluptas nesciunt totam laboriosam odio delectus, animi numquam! Ut eos, minima perspiciatis adipisci nesciunt ratione odio aspernatur.
       - id: npm-4
         name: n4
-        icon: fa fa-facebook-f
-        description: 4 Lorem ipsum dolor sit amet consectetur adipisicing elit. Non similique voluptatum amet molestias voluptas nesciunt totam laboriosam odio delectus, animi numquam! Ut eos, minima perspiciatis adipisci nesciunt ratione odio aspernatur.
+        icon: fab fa-npm
+        title: 4 Title
+        description: Lorem ipsum dolor sit amet consectetur adipisicing elit. Non similique voluptatum amet molestias voluptas nesciunt totam laboriosam odio delectus, animi numquam! Ut eos, minima perspiciatis adipisci nesciunt ratione odio aspernatur.
+
+  - id: 3
+    name: music
+    title: Music
+    description: Lorem ipsum dolor sit amet consectetur adipisicing elit. Non similique voluptatum amet molestias voluptas nesciunt totam laboriosam odio delectus, animi numquam! Ut eos, minima perspiciatis adipisci nesciunt ratione odio aspernatur.
+    icon: fas fa-music
+    list-box:
+      - id: music-1
+        name: n1
+        icon: fas fa-music
+        title: 1 Title
+        description: Lorem ipsum dolor sit amet consectetur adipisicing elit. Non similique voluptatum amet molestias voluptas nesciunt totam laboriosam odio delectus, animi numquam! Ut eos, minima perspiciatis adipisci nesciunt ratione odio aspernatur.
+      - id: music-2
+        name: n2
+        icon: fas fa-music
+        title: 2 Title
+        description: Lorem ipsum dolor sit amet consectetur adipisicing elit. Non similique voluptatum amet molestias voluptas nesciunt totam laboriosam odio delectus, animi numquam! Ut eos, minima perspiciatis adipisci nesciunt ratione odio aspernatur.
+      - id: music-3
+        name: n3
+        icon: fas fa-music
+        title: 3 Title
+        description: Lorem ipsum dolor sit amet consectetur adipisicing elit. Non similique voluptatum amet molestias voluptas nesciunt totam laboriosam odio delectus, animi numquam! Ut eos, minima perspiciatis adipisci nesciunt ratione odio aspernatur.
+      - id: music-4
+        name: n4
+        icon: fas fa-music
+        title: 4 Title
+        description: Lorem ipsum dolor sit amet consectetur adipisicing elit. Non similique voluptatum amet molestias voluptas nesciunt totam laboriosam odio delectus, animi numquam! Ut eos, minima perspiciatis adipisci nesciunt ratione odio aspernatur.
+
+  - id: 4
+    name: film
+    title: Anime
+    description: Lorem ipsum dolor sit amet consectetur adipisicing elit. Non similique voluptatum amet molestias voluptas nesciunt totam laboriosam odio delectus, animi numquam! Ut eos, minima perspiciatis adipisci nesciunt ratione odio aspernatur.
+    icon: fas fa-film
+    list-box:
+      - id: film-1
+        name: n1
+        icon: fas fa-film
+        title: 1 Title
+        description: Lorem ipsum dolor sit amet consectetur adipisicing elit. Non similique voluptatum amet molestias voluptas nesciunt totam laboriosam odio delectus, animi numquam! Ut eos, minima perspiciatis adipisci nesciunt ratione odio aspernatur.
+      - id: film-2
+        name: n2
+        icon: fas fa-film
+        title: 2 Title
+        description: Lorem ipsum dolor sit amet consectetur adipisicing elit. Non similique voluptatum amet molestias voluptas nesciunt totam laboriosam odio delectus, animi numquam! Ut eos, minima perspiciatis adipisci nesciunt ratione odio aspernatur.
+      - id: film-3
+        name: n3
+        icon: fas fa-film
+        title: 3 Title
+        description: Lorem ipsum dolor sit amet consectetur adipisicing elit. Non similique voluptatum amet molestias voluptas nesciunt totam laboriosam odio delectus, animi numquam! Ut eos, minima perspiciatis adipisci nesciunt ratione odio aspernatur.
+      - id: film-4
+        name: n4
+        icon: fas fa-film
+        title: 4 Title
+        description: Lorem ipsum dolor sit amet consectetur adipisicing elit. Non similique voluptatum amet molestias voluptas nesciunt totam laboriosam odio delectus, animi numquam! Ut eos, minima perspiciatis adipisci nesciunt ratione odio aspernatur.
