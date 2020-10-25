@@ -3,7 +3,7 @@
 
 import React from 'react';
 
-import getUserInfo from '../../../ajax/get-user-info';
+import { getUserInfo } from '../../../ajax/get-user';
 
 import getPropWithDefval from '../../../utils/get-prop-with-defval';
 

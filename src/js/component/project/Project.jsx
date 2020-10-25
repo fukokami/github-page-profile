@@ -5,7 +5,7 @@ import React from 'react';
 
 import Row from './widget/Row.jsx';
 
-import getProjectList from '../../ajax/get-project-list';
+import { getProjectList } from '../../ajax/get-project';
 import getPropWithDefval from '../../utils/get-prop-with-defval';
 
 

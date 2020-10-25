@@ -6,7 +6,7 @@ import React from 'react';
 import Info from './widget/Info.jsx';
 import Skill from './widget/Skill.jsx';
 
-import { getProfileInfo, getProfileSkill } from '../../ajax/get-profile-list';
+import { getProfileInfo, getProfileSkill } from '../../ajax/get-profile';
 
 import getPropWithDefval from '../../utils/get-prop-with-defval';
 

@@ -7,7 +7,7 @@ import { useSprings, animated, config } from 'react-spring';
 import ListBox from './widget/ListBox.jsx';
 import Label from './widget/Label.jsx';
 
-import getStorageList from '../../ajax/get-storage-list';
+import { getStorageList } from '../../ajax/get-storage';
 import getPropWithDefval from '../../utils/get-prop-with-defval';
 
 import { CATEGORY_STYLE } from '../../constants/storageStyles';

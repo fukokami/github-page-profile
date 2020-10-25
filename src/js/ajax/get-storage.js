@@ -5,9 +5,9 @@ import { compose, defaultTo, prop } from 'ramda';
 
 import data from './data/data.yaml';
 
-export default function getUserInfo() {
+export const getStorageList = () => {
     return compose(
-        defaultTo({}),
-        prop('user'),
+        defaultTo([]),
+        prop('storage'),
     )(data);
-}
+};
