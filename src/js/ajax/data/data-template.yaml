@@ -67,5 +67,22 @@ storage:
         title:
         description:
 
-
-    
+footer:
+  social:
+    - id:
+      name:
+      color:
+      icon:
+      url:
+  quick-link:
+    title:
+    list:
+      - id:
+        title:
+        url:
+  contact:
+    title:
+    list:
+      - id:
+        icon:
+        value:

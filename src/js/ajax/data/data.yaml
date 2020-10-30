@@ -280,3 +280,57 @@ storage:
         icon: fas fa-film
         title: 4 Title
         description: Lorem ipsum dolor sit amet consectetur adipisicing elit. Non similique voluptatum amet molestias voluptas nesciunt totam laboriosam odio delectus, animi numquam! Ut eos, minima perspiciatis adipisci nesciunt ratione odio aspernatur.
+
+footer:
+  social:
+    - id: fs-facebook
+      name: Facebook
+      color: fb
+      icon: fa fa-facebook-f
+      url: https://www.facebook.com/thang96.it/
+    - id: fs-github
+      name: Github
+      color: git
+      icon: fab fa-github
+      url: https://github.com/masterite1996
+    - id: fs-google
+      name: Google
+      color: gg
+      icon: fab fa-google-plus-g
+      url: https://google.com 
+  quick-link:
+    title: Useful link
+    list:
+      - id: fq-1
+        title: Project
+        url: /#/project
+      - id: fq-2
+        title: NPM
+        url: /#/npm
+      - id: fq-3
+        title: Anime
+        url: /#/storage/anime
+      - id: fq-4
+        title: Music
+        url: /#/storage/music
+      - id: fq-5
+        title: Blog
+        url: /#/blog
+      - id: fq-6
+        title: Note
+        url: /#/note
+      - id: fq-7
+        title: Profile
+        url: /#/profile
+      - id: fq-8
+        title: Storage
+        url: /#/storage
+  contact:
+    title: Contact
+    list:
+      - id: fc-1
+        icon: fas fa-phone-volume
+        value: +84 (0)398 xxx x96
+      - id: fc-2
+        icon: far fa-map
+        value: Ho Chi Minh City, Vietnam

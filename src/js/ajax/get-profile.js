@@ -5,7 +5,7 @@ import { compose, defaultTo, path } from 'ramda';
 
 import data from './data/data.yaml';
 
-import { INFO, SKILL } from '../constants/profileTypes';
+import { INFO, SKILL } from '../constants/enum';
 
 export const getProfileInfo = () => compose(
     defaultTo([]),
