@@ -6,7 +6,7 @@ import React from 'react';
 import { bool, object } from 'prop-types';
 
 
-import getPropWithDefval from '../../../../utils/get-prop-with-defval';
+import { getType, getIcon, getFrameHeader, getValue } from '../../../../utils/get-data-with-defval';
 
 
 const appendClass = (condition, defaultClass = [], appendClass = []) => {
@@ -33,11 +33,6 @@ const checkEmpty = converge(
         prop('value'),
     ]
 );
-
-const getType = getPropWithDefval('class_size', 'half');
-const getIcon = getPropWithDefval('icon', '');
-const getFrameHeader = getPropWithDefval('frame_header', 'Unknown');
-const getValue = getPropWithDefval('value', 'Unknown');
 
 export default function Frame({ isReserve, frame }) {
 

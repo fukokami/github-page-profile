@@ -5,7 +5,7 @@ import { always, compose, concat, cond, identity, ifElse, join, prop, propEq, T 
 import React from 'react';
 import { array } from 'prop-types';
 
-import getPropWithDefval from '../../../../utils/get-prop-with-defval';
+import { getId, getColor } from '../../../../utils/get-data-with-defval';
 
 const renderIcon = badge => {
     const icon = prop('icon', badge);
@@ -37,13 +37,6 @@ const appendClass = (condition, defaultClass = [], appendClass = []) => {
         )
     )(condition);
 };
-
-const getId = item => {
-    const defval = Math.floor(Math.random() * 1000);
-
-    return getPropWithDefval('id', defval)(item);
-};
-const getColor = getPropWithDefval('color', '');
 
 export default function Badge({ badgeList }) {
 

@@ -8,17 +8,10 @@ import ListBox from './widget/ListBox.jsx';
 import Label from './widget/Label.jsx';
 
 import { getStorageList } from '../../ajax/get-storage';
-import getPropWithDefval from '../../utils/get-prop-with-defval';
+import { getId, getListBox } from '../../utils/get-data-with-defval';
 
 import { CATEGORY_STYLE } from '../../constants/storageStyles';
 import generateStyleWithConfig from '../../utils/animate/generate-styles-with-config';
-
-const getId = item => {
-    const defval = Math.floor(Math.random() * 1000);
-
-    return getPropWithDefval('id', defval)(item);
-};
-const getListBox = getPropWithDefval('list-box', []);
 
 const setCategoryAnimation = generateStyleWithConfig(CATEGORY_STYLE, { config: config.gentle });
 

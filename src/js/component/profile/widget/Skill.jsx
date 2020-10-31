@@ -9,15 +9,7 @@ import { array } from 'prop-types';
 import Badge from './skill/Badge.jsx';
 import Evaluate from './skill/Evaluate.jsx';
 
-import getPropWithDefval from '../../../utils/get-prop-with-defval';
-
-const getId = item => {
-    const defval = Math.floor(Math.random() * 1000);
-
-    return getPropWithDefval('id', defval)(item);
-};
-const getBlocHeader = getPropWithDefval('bloc_header', 'Unknown');
-const getFrame = getPropWithDefval('frame', []);
+import { getId, getBlocHeader, getFrame } from '../../../utils/get-data-with-defval';
 
 const renderSkillFrame = cond([
     [propEq('type', 'badge'), item => { return (<Badge badgeList={getFrame(item)} />); }],

@@ -7,19 +7,12 @@ import React from 'react';
 
 import { getFooterLink } from '../../../ajax/get-footer';
 
-import getPropWithDefval from '../../../utils/get-prop-with-defval';
+import { getId, getList, getTitle, getUrl } from '../../../utils/get-data-with-defval';
 
 
 const listLink = getFooterLink();
 
-const getId = item => {
-    const defval = Math.floor(Math.random() * 1000);
-
-    return getPropWithDefval('id', defval)(item);
-};
-const getTitle = getPropWithDefval('title', 'Unknown');
-const getUrl = getPropWithDefval('url', '#/profile');
-const getList = compose(
+const getCustomList = compose(
     converge(
         splitAt,
         [
@@ -27,7 +20,7 @@ const getList = compose(
             identity
         ]
     ),
-    getPropWithDefval('list', [])
+    getList
 );
 
 
@@ -51,7 +44,7 @@ export default function Link() {
             <hr />
             <div className="list-link">
                 {
-                    getList(listLink).map(link => {
+                    getCustomList(listLink).map(link => {
                         return (
                             <ul key={getId(link)}>
                                 {

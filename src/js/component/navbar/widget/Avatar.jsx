@@ -5,11 +5,7 @@ import React from 'react';
 
 import { getUserInfo } from '../../../ajax/get-user';
 
-import getPropWithDefval from '../../../utils/get-prop-with-defval';
-
-const getName = getPropWithDefval('name', 'Unknown');
-const getJob = getPropWithDefval('job', 'Unknown');
-const getSocial = getPropWithDefval('social', []);
+import { getName, getJob, getSocial } from '../../../utils/get-data-with-defval';
 
 export default function Avatar() {
 

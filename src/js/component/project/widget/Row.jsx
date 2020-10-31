@@ -8,27 +8,21 @@ import { object } from 'prop-types';
 
 import Icons from './Icons.jsx';
 
-import getPathWithDefval from '../../../utils/get-path-with-defval';
+import { getStyleIcon, getCardTitle, getCardDateStart, getCardDateEnd, getCardIcons, getCardDescription } from '../../../utils/get-data-with-defval';
 
-const getStyleIcon = getPathWithDefval(['style', 'icon'], 'fa fa-question');
-
-const getCardTitle = getPathWithDefval(['card', 'title'], 'Unknown');
-const getCardDate = compose(
+const getCustomCardDate = compose(
     join(' → '),
     juxt([
-        getPathWithDefval(['card', 'start'], '???'),
-        getPathWithDefval(['card', 'end'], '???')
+        getCardDateStart,
+        getCardDateEnd,
     ])
 );
-const getCardIcons = getPathWithDefval(['card', 'icons'], []);
-const getCardDescription = getPathWithDefval(['card', 'description'], 'Nothing...');
-
 export default function Row({ item }) {
 
     return (
         <div className="timeline">
             <div className="timeline-content">
-                <span className="timeline-year">{getCardDate(item)}</span>
+                <span className="timeline-year">{getCustomCardDate(item)}</span>
                 <div className="timeline-icon">
                     <i className={getStyleIcon(item)}></i>
                 </div>

@@ -5,17 +5,7 @@ import { range } from 'ramda';
 import React from 'react';
 import { array } from 'prop-types';
 
-import getPropWithDefval from '../../../../utils/get-prop-with-defval';
-
-const getId = item => {
-    const defval = Math.floor(Math.random() * 1000);
-
-    return getPropWithDefval('id', defval)(item);
-};
-const getValue = getPropWithDefval('value', 'Unknown');
-const getEvaluate = getPropWithDefval('evaluate', []);
-const getTitle = getPropWithDefval('title', '?');
-const getPoint = getPropWithDefval('point', 0);
+import { getId, getValue, getEvaluate, getTitle, getPoint } from '../../../../utils/get-data-with-defval';
 
 
 const renderEvaluatePoint = (item) => {

@@ -8,7 +8,7 @@ import { useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { bool, object } from 'prop-types';
 
-import getPropWithDefval from '../../../utils/get-prop-with-defval';
+import { getIcon, getTitle, getDescription } from '../../../utils/get-data-with-defval';
 import { animated, useSpring } from 'react-spring';
 
 import { DESCRIPTION_STYLE } from '../../../constants/storageStyles';
@@ -26,10 +26,6 @@ const appendClass = (condition, defaultClass = [], appendClass = []) => {
         )
     )(condition);
 };
-
-const getIcon = getPropWithDefval('icon', 'fa fa-question');
-const getTitle = getPropWithDefval('title', 'Unknown');
-const getDescription = getPropWithDefval('description', 'Unknown');
 
 const setDescriptionAnimation = generateStyleWithConfig(DESCRIPTION_STYLE, { delay: 300 });
 

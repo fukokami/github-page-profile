@@ -6,16 +6,7 @@ import { array } from 'prop-types';
 
 import Frame from './info/Frame.jsx';
 
-import getPropWithDefval from '../../../utils/get-prop-with-defval';
-
-
-const getId = item => {
-    const defval = Math.floor(Math.random() * 1000);
-
-    return getPropWithDefval('id', defval)(item);
-};
-const getSubHeader = getPropWithDefval('bloc_header', 'Unknown');
-const getFrameList = getPropWithDefval('frame', []);
+import { getId, getSubHeader, getFrameList } from '../../../utils/get-data-with-defval';
 
 export default function Info({ infoList }) {
 

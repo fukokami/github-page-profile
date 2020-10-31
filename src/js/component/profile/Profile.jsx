@@ -8,13 +8,10 @@ import Skill from './widget/Skill.jsx';
 
 import { getProfileInfo, getProfileSkill } from '../../ajax/get-profile';
 
-import getPropWithDefval from '../../utils/get-prop-with-defval';
+import { getHeader, getBloc } from '../../utils/get-data-with-defval';
 
 const profileInfo = getProfileInfo();
 const profileSkill = getProfileSkill();
-
-const getHeader = getPropWithDefval('header', 'Unknown');
-const getBloc = getPropWithDefval('bloc', []);
 
 export default function Profile() {
 

@@ -4,18 +4,7 @@ import React from 'react';
 import { array, bool, object } from 'prop-types';
 import { animated } from 'react-spring';
 
-import getPropWithDefval from '../../../utils/get-prop-with-defval';
-
-
-const getId = item => {
-    const defval = Math.floor(Math.random() * 1000);
-
-    return getPropWithDefval('id', defval)(item);
-};
-const getIcon = getPropWithDefval('icon', 'fa fa-question');
-const getTitle = getPropWithDefval('title', 'Unknown');
-const getDescription = getPropWithDefval('description', 'Unknown');
-
+import { getId, getIcon, getTitle, getDescription } from '../../../utils/get-data-with-defval';
 
 export default function ListBox({ listBox, prop, isActive }) {
 

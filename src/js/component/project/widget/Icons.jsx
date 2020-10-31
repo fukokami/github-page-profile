@@ -4,15 +4,7 @@
 import React from 'react';
 import { array } from 'prop-types';
 
-import getPropWithDefval from '../../../utils/get-prop-with-defval';
-
-
-const getId = item => {
-    const defval = Math.floor(Math.random() * 1000);
-
-    return getPropWithDefval('id', defval)(item);
-};
-const getIcon = getPropWithDefval('icon', 'fa fa-question');
+import { getId, getIcon } from '../../../utils/get-data-with-defval';
 
 export default function Icons({ iconList }) {
 

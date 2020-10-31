@@ -5,19 +5,10 @@ import React from 'react';
 
 import { getFooterSocial } from '../../../ajax/get-footer';
 
-import getPropWithDefval from '../../../utils/get-prop-with-defval';
+import { getId, getIcon, getColor, getUrl } from '../../../utils/get-data-with-defval';
 
 
 const socialList = getFooterSocial();
-
-const getId = item => {
-    const defval = Math.floor(Math.random() * 1000);
-
-    return getPropWithDefval('id', defval)(item);
-};
-const getIcon = getPropWithDefval('icon', 'fa fa-question');
-const getColor = getPropWithDefval('color', '');
-const getUrl = getPropWithDefval('url', '#');
 
 export default function Social() {
 
