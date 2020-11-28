@@ -8,7 +8,7 @@ import ListBox from './widget/ListBox.jsx';
 import Label from './widget/Label.jsx';
 
 import { getStorageList } from '../../ajax/get-storage';
-import { getId, getListBox } from '../../utils/get-data-with-defval';
+import { getId, getListBox, getDescriptionComponent } from '../../utils/get-data-with-defval';
 
 import { CATEGORY_STYLE } from '../../constants/storageStyles';
 import generateStyleWithConfig from '../../utils/animate/generate-styles-with-config';
@@ -43,7 +43,7 @@ export default function Storage() {
                             style={{ height: prop.height }}
                             onClick={categoryOnClick(index)}
                         >
-                            <ListBox listBox={getListBox(item)} prop={prop} isActive={isActive} />
+                            <ListBox listBox={getListBox(item)} baseDescComponent={getDescriptionComponent(item)} prop={prop} isActive={isActive} />
                             <Label item={item} isActive={isActive} />
                         </animated.div>
                     );

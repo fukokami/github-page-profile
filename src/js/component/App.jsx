@@ -14,6 +14,7 @@ import Footer from './footer/Footer.jsx';
 import Profile from './profile/Profile.jsx';
 import Project from './project/Project.jsx';
 import Storage from './storage/Storage.jsx';
+import StorageDetail from './storage/detail/Detail.jsx';
 
 import { selectTab } from '../actions/selectTab';
 import { PROFILE, PROJECT, STORAGE } from '../constants/tabList';
@@ -53,9 +54,7 @@ export default function App() {
 
                     <Route exact path={`/${STORAGE}`} component={Storage} />
 
-                    <Route exact path={`/${STORAGE}/:type`} >
-                        <div>Storage Content Type</div>
-                    </Route>
+                    <Route exact path={`/${STORAGE}/:type`} component={StorageDetail} />
 
                     <Route>
                         <div>404 Not Found</div>

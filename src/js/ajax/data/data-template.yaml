@@ -3,7 +3,7 @@ user:
   job:
   social:
     - id:
-      name: 
+      name:
       icon:
       url:
 
@@ -12,31 +12,31 @@ profile:
     header:
     bloc:
       - id:
-        bloc_header:
+        bloc-header:
         frame:
           - id:
-            frame_header:
-            class_size:
-            icon: 
+            frame-header:
+            class-size:
+            icon:
             value:
   skill:
     header:
     bloc:
       - id:
         type:
-        bloc_header:
+        bloc-header:
         frame:
-        - id:
-          name:
-          type:
-          icon:
-          image:
-        - id:
-          value:
-          evaluate:
-            - id:
-              title:
-              point:
+          - id:
+            name:
+            type:
+            icon:
+            image:
+          - id:
+            value:
+            evaluate:
+              - id:
+                title:
+                point:
 
 project:
   - id:
@@ -60,12 +60,33 @@ storage:
     title:
     description:
     icon:
+    component:
+      type:
+      base-uri:
+      description:
+        property:
+      more-info:
+        option:
+          - id:
+            name:
+            property:
+            icon:
     list-box:
       - id:
         name:
         icon:
+        color:
         title:
-        description:
+        component:
+          path:
+          description:
+            property:
+          more-info:
+            option:
+              - id:
+                name:
+                property:
+                icon:
 
 footer:
   social:

@@ -16,47 +16,47 @@ profile:
     header: Info
     bloc:
       - id: 11
-        bloc_header: Information
+        bloc-header: Information
         frame:
           - id: 111
-            frame_header: Name
-            class_size: half
+            frame-header: Name
+            class-size: half
             icon: fa fa-user
             value: Fukokami
           - id: 112
-            frame_header: Age
-            class_size: half
+            frame-header: Age
+            class-size: half
             icon: fa fa-birthday-cake
             value: 24
           - id: 113
-            frame_header: Phone
-            class_size: half
+            frame-header: Phone
+            class-size: half
             icon: fa fa-phone
             value: +84 (0)398 xxx x96
           - id: 114
-            frame_header: Email
-            class_size: half
+            frame-header: Email
+            class-size: half
             icon: fa fa-envelope
             value: do••••••••••ng.cntt@gmail.com
       - id: 12
-        bloc_header: Education
+        bloc-header: Education
         frame:
           - id: 121
-            frame_header: University ( 2015 - 2019 )
-            class_size: full
+            frame-header: University ( 2015 - 2019 )
+            class-size: full
             icon: fa fa-school
             value: Ho Chi Minh City University of Technology and Education
           - id: 122
-            frame_header: Degree
-            class_size: full
+            frame-header: Degree
+            class-size: full
             icon: fa fa-graduation-cap
             value: "In 2019: Information Technology Engineer"
       - id: 13
-        bloc_header: Summary
+        bloc-header: Summary
         frame:
           - id: 131
-            frame_header: Hobby
-            class_size: full
+            frame-header: Hobby
+            class-size: full
             icon: fa fa-anchor
             value: Read Lightnovel, Manga, Anime,...
 
@@ -65,7 +65,7 @@ profile:
     bloc:
       - id: 21
         type: badge
-        bloc_header: Programing Language
+        bloc-header: Programing Language
         frame:
           - id: 211
             name: nodeJS
@@ -89,7 +89,7 @@ profile:
             icon: fab fa-android
       - id: 22
         type: evaluate
-        bloc_header: Languages
+        bloc-header: Languages
         frame:
           - id: 221
             value: English
@@ -117,7 +117,7 @@ profile:
                 point: 0
       - id: 23
         type: badge
-        bloc_header: Other
+        bloc-header: Other
         frame:
           - id: 231
             name: aws
@@ -176,56 +176,99 @@ storage:
   - id: 1
     name: docker
     title: Docker
-    description: Lorem ipsum dolor sit amet consectetur adipisicing elit. Non similique voluptatum amet molestias voluptas nesciunt totam laboriosam odio delectus, animi numquam! Ut eos, minima perspiciatis adipisci nesciunt ratione odio aspernatur.
+    description: List Docker Image Useful
     icon: fab fa-docker
+    component:
+      type: api
+      base-uri: https://hub.docker.com/v2/repositories/
+      description:
+        property: description
     list-box:
-      - id: docker-1
-        name: d1
+      - id: docker-localstack
+        name: localstack
         icon: fab fa-docker
-        title: 1 Title
-        description: Lorem ipsum dolor sit amet consectetur adipisicing elit. Non similique voluptatum amet molestias voluptas nesciunt totam laboriosam odio delectus, animi numquam! Ut eos, minima perspiciatis adipisci nesciunt ratione odio aspernatur. 
-      - id: docker-2
-        name: d2
+        title: localstack
+        component:
+          path: localstack/localstack
+          more-info:
+            option:
+              - id: docker-localstack-option-1
+                name: pull
+                property: pull_count
+                icon: fas fa-download
+              - id: docker-localstack-option-2
+                name: star
+                property: star_count
+                icon: far fa-star
+              - id: docker-localstack-option-3
+                name: like
+                type: constant
+                value: like
+      - id: docker-node
+        name: node
         icon: fab fa-docker
-        title: 2 Title
-        description: Lorem ipsum dolor sit amet consectetur adipisicing elit. Non similique voluptatum amet molestias voluptas nesciunt totam laboriosam odio delectus, animi numquam! Ut eos, minima perspiciatis adipisci nesciunt ratione odio aspernatur. 
-      - id: docker-3
-        name: d3
+        title: node
+        component:
+          path: library/node
+      - id: docker-php
+        name: php
         icon: fab fa-docker
-        title: 3 Title
-        description: Lorem ipsum dolor sit amet consectetur adipisicing elit. Non similique voluptatum amet molestias voluptas nesciunt totam laboriosam odio delectus, animi numquam! Ut eos, minima perspiciatis adipisci nesciunt ratione odio aspernatur.
-      - id: docker-4
-        name: d4
+        title: PHP
+        component:
+          path: library/php
+      - id: docker-dynamodb-local
+        name: dynamo-local
         icon: fab fa-docker
-        title: 4 Title
-        description: Lorem ipsum dolor sit amet consectetur adipisicing elit. Non similique voluptatum amet molestias voluptas nesciunt totam laboriosam odio delectus, animi numquam! Ut eos, minima perspiciatis adipisci nesciunt ratione odio aspernatur.
-
+        title: DynamoDB Local
+        component:
+          path: amazon/dynamodb-local
   - id: 2
     name: npm
     title: NPM
-    description: Lorem ipsum dolor sit amet consectetur adipisicing elit. Non similique voluptatum amet molestias voluptas nesciunt totam laboriosam odio delectus, animi numquam! Ut eos, minima perspiciatis adipisci nesciunt ratione odio aspernatur.
+    description: List NPM Useful
     icon: fab fa-npm
+    component:
+      type: api
+      base-uri: https://registry.npmjs.org/
+      description:
+        property: description
     list-box:
-      - id: npm-1
-        name: n1
+      - id: npm-node-fetch
+        name: node-fetch
         icon: fab fa-npm
-        title: 1 Title
-        description: Lorem ipsum dolor sit amet consectetur adipisicing elit. Non similique voluptatum amet molestias voluptas nesciunt totam laboriosam odio delectus, animi numquam! Ut eos, minima perspiciatis adipisci nesciunt ratione odio aspernatur.
-      - id: npm-2
-        name: n2
+        title: node-fetch
+        component:
+          path: node-fetch
+          more-info:
+            option:
+              - id: node-node-fetch-option-1
+                base-uri: https://api.npmjs.org/downloads/point/
+                path: <%time.yyyymmdd.7%>:<%time.yyyymmdd.1%>/node-fetch
+                name: week-download
+                property: downloads
+                icon: fas fa-download
+              - id: node-node-fetch-option-2
+                name: license
+                property: license
+                icon: fas fa-balance-scale
+      - id: npm-ramda
+        name: ramda
         icon: fab fa-npm
-        title: 2 Title
-        description: Lorem ipsum dolor sit amet consectetur adipisicing elit. Non similique voluptatum amet molestias voluptas nesciunt totam laboriosam odio delectus, animi numquam! Ut eos, minima perspiciatis adipisci nesciunt ratione odio aspernatur.
-      - id: npm-3
-        name: n3
+        title: ramda
+        component:
+          path: ramda
+      - id: npm-underscore
+        name: underscore
         icon: fab fa-npm
-        title: 3 Title
-        description: Lorem ipsum dolor sit amet consectetur adipisicing elit. Non similique voluptatum amet molestias voluptas nesciunt totam laboriosam odio delectus, animi numquam! Ut eos, minima perspiciatis adipisci nesciunt ratione odio aspernatur.
-      - id: npm-4
-        name: n4
+        title: underscore
+        component:
+          path: underscore
+      - id: npm-axios
+        name: axios
         icon: fab fa-npm
-        title: 4 Title
-        description: Lorem ipsum dolor sit amet consectetur adipisicing elit. Non similique voluptatum amet molestias voluptas nesciunt totam laboriosam odio delectus, animi numquam! Ut eos, minima perspiciatis adipisci nesciunt ratione odio aspernatur.
+        title: axios
+        component:
+          path: axios
 
   - id: 3
     name: music
@@ -237,25 +280,37 @@ storage:
         name: n1
         icon: fas fa-music
         title: 1 Title
-        description: Lorem ipsum dolor sit amet consectetur adipisicing elit. Non similique voluptatum amet molestias voluptas nesciunt totam laboriosam odio delectus, animi numquam! Ut eos, minima perspiciatis adipisci nesciunt ratione odio aspernatur.
+        component:
+          description:
+            type: constant
+            value: Lorem ipsum dolor sit amet consectetur adipisicing elit. Non similique voluptatum amet molestias voluptas nesciunt totam laboriosam odio delectus, animi numquam! Ut eos, minima perspiciatis adipisci nesciunt ratione odio aspernatur.
       - id: music-2
         name: n2
         icon: fas fa-music
         title: 2 Title
-        description: Lorem ipsum dolor sit amet consectetur adipisicing elit. Non similique voluptatum amet molestias voluptas nesciunt totam laboriosam odio delectus, animi numquam! Ut eos, minima perspiciatis adipisci nesciunt ratione odio aspernatur.
+        component:
+          description:
+            type: constant
+            value: Lorem ipsum dolor sit amet consectetur adipisicing elit. Non similique voluptatum amet molestias voluptas nesciunt totam laboriosam odio delectus, animi numquam! Ut eos, minima perspiciatis adipisci nesciunt ratione odio aspernatur.
       - id: music-3
         name: n3
         icon: fas fa-music
         title: 3 Title
-        description: Lorem ipsum dolor sit amet consectetur adipisicing elit. Non similique voluptatum amet molestias voluptas nesciunt totam laboriosam odio delectus, animi numquam! Ut eos, minima perspiciatis adipisci nesciunt ratione odio aspernatur.
+        component:
+          description:
+            type: constant
+            value: Lorem ipsum dolor sit amet consectetur adipisicing elit. Non similique voluptatum amet molestias voluptas nesciunt totam laboriosam odio delectus, animi numquam! Ut eos, minima perspiciatis adipisci nesciunt ratione odio aspernatur.
       - id: music-4
         name: n4
         icon: fas fa-music
         title: 4 Title
-        description: Lorem ipsum dolor sit amet consectetur adipisicing elit. Non similique voluptatum amet molestias voluptas nesciunt totam laboriosam odio delectus, animi numquam! Ut eos, minima perspiciatis adipisci nesciunt ratione odio aspernatur.
+        component:
+          description:
+            type: constant
+            value: Lorem ipsum dolor sit amet consectetur adipisicing elit. Non similique voluptatum amet molestias voluptas nesciunt totam laboriosam odio delectus, animi numquam! Ut eos, minima perspiciatis adipisci nesciunt ratione odio aspernatur.
 
   - id: 4
-    name: film
+    name: anime
     title: Anime
     description: Lorem ipsum dolor sit amet consectetur adipisicing elit. Non similique voluptatum amet molestias voluptas nesciunt totam laboriosam odio delectus, animi numquam! Ut eos, minima perspiciatis adipisci nesciunt ratione odio aspernatur.
     icon: fas fa-film
@@ -264,22 +319,34 @@ storage:
         name: n1
         icon: fas fa-film
         title: 1 Title
-        description: Lorem ipsum dolor sit amet consectetur adipisicing elit. Non similique voluptatum amet molestias voluptas nesciunt totam laboriosam odio delectus, animi numquam! Ut eos, minima perspiciatis adipisci nesciunt ratione odio aspernatur.
+        component:
+          description:
+            type: constant
+            value: Lorem ipsum dolor sit amet consectetur adipisicing elit. Non similique voluptatum amet molestias voluptas nesciunt totam laboriosam odio delectus, animi numquam! Ut eos, minima perspiciatis adipisci nesciunt ratione odio aspernatur.
       - id: film-2
         name: n2
         icon: fas fa-film
         title: 2 Title
-        description: Lorem ipsum dolor sit amet consectetur adipisicing elit. Non similique voluptatum amet molestias voluptas nesciunt totam laboriosam odio delectus, animi numquam! Ut eos, minima perspiciatis adipisci nesciunt ratione odio aspernatur.
+        component:
+          description:
+            type: constant
+            value: Lorem ipsum dolor sit amet consectetur adipisicing elit. Non similique voluptatum amet molestias voluptas nesciunt totam laboriosam odio delectus, animi numquam! Ut eos, minima perspiciatis adipisci nesciunt ratione odio aspernatur.
       - id: film-3
         name: n3
         icon: fas fa-film
         title: 3 Title
-        description: Lorem ipsum dolor sit amet consectetur adipisicing elit. Non similique voluptatum amet molestias voluptas nesciunt totam laboriosam odio delectus, animi numquam! Ut eos, minima perspiciatis adipisci nesciunt ratione odio aspernatur.
+        component:
+          description:
+            type: constant
+            value: Lorem ipsum dolor sit amet consectetur adipisicing elit. Non similique voluptatum amet molestias voluptas nesciunt totam laboriosam odio delectus, animi numquam! Ut eos, minima perspiciatis adipisci nesciunt ratione odio aspernatur.
       - id: film-4
         name: n4
         icon: fas fa-film
         title: 4 Title
-        description: Lorem ipsum dolor sit amet consectetur adipisicing elit. Non similique voluptatum amet molestias voluptas nesciunt totam laboriosam odio delectus, animi numquam! Ut eos, minima perspiciatis adipisci nesciunt ratione odio aspernatur.
+        component:
+          description:
+            type: constant
+            value: Lorem ipsum dolor sit amet consectetur adipisicing elit. Non similique voluptatum amet molestias voluptas nesciunt totam laboriosam odio delectus, animi numquam! Ut eos, minima perspiciatis adipisci nesciunt ratione odio aspernatur.
 
 footer:
   social:
@@ -297,7 +364,7 @@ footer:
       name: Google
       color: gg
       icon: fab fa-google-plus-g
-      url: https://google.com 
+      url: https://google.com
   quick-link:
     title: Useful link
     list:

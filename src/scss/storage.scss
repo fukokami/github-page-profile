@@ -34,7 +34,7 @@
           align-items: center;
           justify-content: center;
           flex-direction: column;
-          flex-grow: 1;
+          width: 7em;
 
           i {
             width: 2.7em;
@@ -55,7 +55,9 @@
             overflow: hidden;
             display: block;
             text-overflow: ellipsis;
-            font-size: large;
+            font-size: small;
+            font-weight: bold;
+            width: 6em;
           }
         }
 
@@ -148,6 +150,174 @@
             max-width: 33em;
           }
         }
+      }
+    }
+  }
+}
+
+.storage-detail {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  margin: 2em auto;
+  padding: 50px 0;
+  text-align: center;
+  word-wrap: break-word;
+
+  h2 {
+    font-weight: 200;
+    font-size: 30px;
+    color: #536e79;
+  }
+
+  .list-box {
+    margin: 0;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    list-style: none;
+    background: #e6e2c8;
+    border-radius: 0.313em;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.5);
+
+    .box {
+      width: 30%;
+      transition: box-shadow 0.3s;
+      background: white;
+      margin: 0.5em;
+      border-radius: 0.6em;
+
+      &:hover {
+        box-shadow: 0 12px 15px 0 rgba(0, 0, 0, 0.24),
+          0 17px 50px 0 rgba(0, 0, 0, 0.19);
+      }
+
+      &:hover span {
+        color: white;
+      }
+      &:hover .sub {
+        color: #555;
+      }
+      &:hover h3 {
+        color: #536e79;
+      }
+
+      span {
+        font-size: 2.6em;
+        display: block;
+        transition: color 0.3s;
+        color: black;
+        height: 3em;
+        border-top-left-radius: 12px;
+        border-top-right-radius: 12px;
+
+        &:before,
+        &:after {
+          position: static;
+          display: flex;
+          justify-content: center;
+          line-height: 3em;
+        }
+      }
+
+      h3 {
+        color: darken(black, 20%);
+        display: inline-block;
+        margin-block-start: 0.6em;
+        margin-block-end: 0.6em;
+        margin-inline-start: 0;
+        margin-inline-end: 0;
+        font-weight: bold;
+        text-transform: uppercase;
+        transition: color 0.3s;
+      }
+
+      .list-info-box {
+        display: flex;
+        justify-content: space-around;
+        position: relative;
+        padding: 8px;
+        margin-bottom: 1em;
+        max-height: 0;
+        flex-wrap: wrap;
+
+        .option-box {
+          opacity: 0;
+
+          i {
+            background: green;
+            border-radius: 15%;
+            padding: 5px;
+            color: white;
+          }
+
+          div {
+            text-overflow: ellipsis;
+            width: 60px;
+            overflow: hidden;
+            white-space: nowrap;
+          }
+        }
+
+        &::before {
+          position: absolute;
+          content: "";
+          height: 0;
+          width: 0;
+          bottom: 0;
+          left: 0;
+          box-sizing: border-box;
+        }
+
+        &::after {
+          position: absolute;
+          content: "";
+          height: 0;
+          width: 0;
+          top: 0;
+          right: 0;
+          box-sizing: border-box;
+        }
+      }
+
+      &:hover {
+        .list-info-box {
+          max-height: 10em;
+          transition: height 0.3s linear;
+        }
+
+        .option-box {
+          opacity: 1;
+          transition: opacity 0.8s linear;
+        }
+
+        .list-info-box::before {
+          height: 100%;
+          width: 100%;
+          border: 1px solid #536e79;
+          border-right: none;
+          border-bottom: none;
+          transition: height 0.2s linear 0.3s, width 0.3s linear 0.5s;
+        }
+
+        .list-info-box::after {
+          height: 100%;
+          width: 100%;
+          border: 1px solid #536e79;
+          border-left: none;
+          border-top: none;
+          transition: height 0.2s linear 0.3s, width 0.3s linear 0.5s;
+        }
+      }
+
+      .sub {
+        color: black;
+        text-align: left;
+        text-indent: 1em;
+        font-size: 16px;
+        line-height: 26px;
+        transition: color 0.3s;
+        text-align: justify;
       }
     }
   }

@@ -27,9 +27,9 @@ const checkEmpty = converge(
         unapply(identity)
     ),
     [
-        prop('class_size'),
+        prop('class-size'),
         prop('icon'),
-        prop('frame_header'),
+        prop('frame-header'),
         prop('value'),
     ]
 );

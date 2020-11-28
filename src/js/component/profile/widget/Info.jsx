@@ -6,7 +6,7 @@ import { array } from 'prop-types';
 
 import Frame from './info/Frame.jsx';
 
-import { getId, getSubHeader, getFrameList } from '../../../utils/get-data-with-defval';
+import { getId, getBlocHeader, getFrameList } from '../../../utils/get-data-with-defval';
 
 export default function Info({ infoList }) {
 
@@ -16,7 +16,7 @@ export default function Info({ infoList }) {
                 infoList.map(item => {
                     return (
                         <div key={getId(item)}>
-                            <h2>{getSubHeader(item)}</h2>
+                            <h2>{getBlocHeader(item)}</h2>
                             <hr />
                             <div className="bloc">
                                 {
