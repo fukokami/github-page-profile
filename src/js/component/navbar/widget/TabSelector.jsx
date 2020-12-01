@@ -1,36 +1,24 @@
 'use strict';
 
-import { always, ifElse, path } from 'ramda';
+import { path } from 'ramda';
 
 import React from 'react';
 import { useSelector } from 'react-redux';
 
-import tabList from '../../../constants/tabList';
-import checkPath from '../../../utils/check-path';
+import TabChild from './tab-selector/TabChild.jsx';
 
-const activeClass =
-    ifElse(
-        checkPath,
-        always('active'),
-        always('')
-    );
+import tabList from '../../../constants/tabList';
 
 export default function TabSelector() {
 
     const currentTab = useSelector(state => path(['selectTab', 'tab'], state));
 
     return (
-        <ul className="menu-bar">
+        <div className="tab-selector">
             {
-                tabList.map(tabName => {
-                    return (
-                        <a key={`tab-${tabName}`} href={`#${tabName}`}>
-                            <li className={activeClass(tabName, currentTab)} > {tabName} </li>
-                        </a>
-                    );
-                })
+                tabList.map(tabName => <TabChild key={tabName} tab={tabName} currentTab={currentTab} />)
             }
-        </ul>
+        </div>
 
     );
 }

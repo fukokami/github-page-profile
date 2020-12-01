@@ -6,36 +6,32 @@ import { array } from 'prop-types';
 
 import Frame from './info/Frame.jsx';
 
-import { getId, getBlocHeader, getFrameList } from '../../../utils/get-data-with-defval';
+import { getId, getBlocHeader, getFrameList } from '../../../utils/defval/get-data-with-defval';
+
+Info.propTypes = {
+    infoList: array
+};
 
 export default function Info({ infoList }) {
 
     return (
-        <div className="info">
+        <>
             {
-                infoList.map(item => {
-                    return (
+                infoList.map(
+                    item =>
                         <div key={getId(item)}>
                             <h2>{getBlocHeader(item)}</h2>
                             <hr />
                             <div className="bloc">
                                 {
-                                    getFrameList(item).map((frame, index) => {
-                                        const isReserve = index % 2 === 0;
-                                        return (
-                                            <Frame key={getId(frame)} isReserve={isReserve} frame={frame} />
-                                        );
-                                    })
+                                    getFrameList(item).map(
+                                        (frame, index) => <Frame key={getId(frame)} isReserve={index % 2 === 1} frame={frame} />
+                                    )
                                 }
                             </div>
                         </div>
-                    );
-                })
+                )
             }
-        </div>
+        </>
     );
 }
-
-Info.propTypes = {
-    infoList: array
-};

@@ -1,11 +1,11 @@
 'use strict';
 
-import { always, compose, concat, cond, identity, ifElse, join, prop, propEq, T } from 'ramda';
+import { always, cond, prop, propEq, T } from 'ramda';
 
 import React from 'react';
 import { array } from 'prop-types';
 
-import { getId, getColor } from '../../../../utils/get-data-with-defval';
+import { getId, getColor } from '../../../../utils/defval/get-data-with-defval';
 
 const renderIcon = badge => {
     const icon = prop('icon', badge);
@@ -26,35 +26,22 @@ const renderContent = cond([
     [T, always(null)],
 ]);
 
-const appendClass = (condition, defaultClass = [], appendClass = []) => {
-
-    return compose(
-        join(' '),
-        ifElse(
-            identity,
-            always(defaultClass),
-            always(concat(defaultClass, appendClass))
-        )
-    )(condition);
+Badge.propTypes = {
+    badgeList: array
 };
 
 export default function Badge({ badgeList }) {
 
     return (
-        <div className="badge-area">
+        <div className="badge">
             {
-                badgeList.map(item => {
-                    return (
-                        <div key={getId(item)} className={appendClass(!1, ['badge'], [getColor(item)])}>
-                            { renderContent(item)}
+                badgeList.map(
+                    item =>
+                        <div key={getId(item)} className={`badge__icons ${getColor(item)}`}>
+                            {renderContent(item)}
                         </div>
-                    );
-                })
+                )
             }
         </div>
     );
 }
-
-Badge.propTypes = {
-    badgeList: array
-};

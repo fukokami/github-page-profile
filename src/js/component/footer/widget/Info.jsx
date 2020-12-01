@@ -10,9 +10,9 @@ import Social from './Social.jsx';
 export default function Info() {
 
     return (
-        <div className="info">
+        <div className="d-flex mx-a py-5 px-1">
             <Social />
-            <div className="right">
+            <div className="footer__content">
                 <Link />
                 <Contact />
             </div>

@@ -14,7 +14,7 @@ import Footer from './footer/Footer.jsx';
 import Profile from './profile/Profile.jsx';
 import Project from './project/Project.jsx';
 import Storage from './storage/Storage.jsx';
-import StorageDetail from './storage/detail/Detail.jsx';
+import StorageDetail from './storage-detail/Detail.jsx';
 
 import { selectTab } from '../actions/selectTab';
 import { PROFILE, PROJECT, STORAGE } from '../constants/tabList';
@@ -41,8 +41,9 @@ export default function App() {
     return (
         <div className="container">
 
+            <Navbar />
+
             <div className="page-content">
-                <Navbar />
 
                 <Switch>
 

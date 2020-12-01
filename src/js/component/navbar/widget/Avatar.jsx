@@ -3,42 +3,26 @@
 
 import React from 'react';
 
+import Image from './avatar/Image.jsx';
+import Icons from './avatar/Icons.jsx';
+import Details from './avatar/Details.jsx';
+
 import { getUserInfo } from '../../../ajax/get-user';
 
-import { getName, getJob, getSocial } from '../../../utils/get-data-with-defval';
+import { getName, getJob, getSocial, getImage } from '../../../utils/defval/get-data-with-defval';
+
+const userInfo = getUserInfo();
 
 export default function Avatar() {
 
-    const userInfo = getUserInfo();
-
     return (
-        <div className="card-wrapper">
+        <div className="avatar">
 
-            <div className="card">
+            <Image src={getImage(userInfo)} />
 
-                <div className="card-image">
-                    <img src="./images/avt.jpg" alt="avatar" />
-                </div>
+            <Icons icons={getSocial(userInfo)} />
 
-                <ul className="social-icons">
-                    {
-                        getSocial(userInfo).map(item => {
-                            return (
-                                <li key={`social-${item.name}`}>
-                                    <a href={item.url} target="_blank" rel="noopener noreferrer" tabIndex="-1">
-                                        <i className={item.icon}></i>
-                                    </a>
-                                </li>
-                            );
-                        })
-                    }
-                </ul>
-
-                <div className="details">
-                    <h3>{getName(userInfo)}</h3>
-                    <div className="job-title">{getJob(userInfo)}</div>
-                </div>
-            </div>
+            <Details name={getName(userInfo)} job={getJob(userInfo)} />
         </div>
     );
 }

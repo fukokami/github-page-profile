@@ -9,34 +9,33 @@ import { array } from 'prop-types';
 import Badge from './skill/Badge.jsx';
 import Evaluate from './skill/Evaluate.jsx';
 
-import { getId, getBlocHeader, getFrame } from '../../../utils/get-data-with-defval';
+import { getId, getBlocHeader, getFrame } from '../../../utils/defval/get-data-with-defval';
 
 const renderSkillFrame = cond([
-    [propEq('type', 'badge'), item => { return (<Badge badgeList={getFrame(item)} />); }],
-    [propEq('type', 'evaluate'), item => { return (<Evaluate evaluateList={getFrame(item)} />); }],
+    [propEq('type', 'badge'), item => <Badge badgeList={getFrame(item)} />],
+    [propEq('type', 'evaluate'), item => <Evaluate evaluateList={getFrame(item)} />],
     [T, always(null)]
 ]);
+
+Skill.propTypes = {
+    skillList: array
+};
 
 export default function Skill({ skillList }) {
 
     return (
-        <div className="skill">
+        <>
             {
-                skillList.map(item => {
-                    return (
+                skillList.map(
+                    item =>
                         <div key={getId(item)}>
                             <h2>{getBlocHeader(item)}</h2>
                             {
                                 renderSkillFrame(item)
                             }
                         </div>
-                    );
-                })
+                )
             }
-        </div>
+        </>
     );
 }
-
-Skill.propTypes = {
-    skillList: array
-};

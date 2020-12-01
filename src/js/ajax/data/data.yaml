@@ -1,6 +1,7 @@
 user:
   name: Fukokami
   job: Developer
+  image: ./images/avt.jpg
   social:
     - id: social-fb
       name: social facebook
@@ -352,17 +353,17 @@ footer:
   social:
     - id: fs-facebook
       name: Facebook
-      color: fb
+      color: facebook
       icon: fa fa-facebook-f
       url: https://www.facebook.com/thang96.it/
     - id: fs-github
       name: Github
-      color: git
+      color: midnight-blue
       icon: fab fa-github
       url: https://github.com/masterite1996
     - id: fs-google
       name: Google
-      color: gg
+      color: google-plus
       icon: fab fa-google-plus-g
       url: https://google.com
   quick-link:

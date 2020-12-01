@@ -1,33 +1,27 @@
 'use strict';
 
 
-import { always, compose, concat, identity, ifElse, join, path } from 'ramda';
+import { path } from 'ramda';
 
 import React, { useEffect } from 'react';
 import { useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { bool, object } from 'prop-types';
 
-import { getIcon, getTitle, getDescription } from '../../../utils/get-data-with-defval';
+import { getIcon, getTitle, getDescription } from '../../../utils/defval/get-data-with-defval';
 import { animated, useSpring } from 'react-spring';
 
 import { DESCRIPTION_STYLE } from '../../../constants/storageStyles';
 
 import generateStyleWithConfig from '../../../utils/animate/generate-styles-with-config';
-
-const appendClass = (condition, defaultClass = [], appendClass = []) => {
-
-    return compose(
-        join(' '),
-        ifElse(
-            identity,
-            always(defaultClass),
-            always(concat(defaultClass, appendClass))
-        )
-    )(condition);
-};
+import appendClass from '../../../utils/append-class';
 
 const setDescriptionAnimation = generateStyleWithConfig(DESCRIPTION_STYLE, { delay: 300 });
+
+Label.propTypes = {
+    item: object.isRequired,
+    isActive: bool,
+};
 
 export default function Label({ item, isActive }) {
 
@@ -42,18 +36,18 @@ export default function Label({ item, isActive }) {
     }, [isActive, set, stop]);
 
     return (
-        <div className="label">
-            <div className="icon">
+        <div className="category__label">
+            <div className="circle label__icon">
                 <i className={getIcon(item)}></i>
             </div>
-            <div className="info">
-                <div className="main">
+            <div className="d-flex-justify-center flex-col w-100 ml-5">
+                <div className="label__main font-medium">
                     {title}
-                    <Link className="more" to={url} >More &#8811;</Link>
+                    <Link className="font-size-small text-amethyst" to={url} >More &#8811;</Link>
                 </div>
 
                 <animated.div
-                    className={appendClass(isActive, ['sub'], ['hide'])}
+                    className={appendClass(!isActive, ['label__sub font-size-small'], ['hide'])}
                     style={{ width: isActive ? prop.width : '0px' }}
                 >
                     {getDescription(item)}
@@ -63,8 +57,3 @@ export default function Label({ item, isActive }) {
         </div>
     );
 }
-
-Label.propTypes = {
-    item: object.isRequired,
-    isActive: bool,
-};

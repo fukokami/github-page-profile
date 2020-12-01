@@ -6,12 +6,19 @@ import { animated } from 'react-spring';
 
 import Description from './Description.jsx';
 
-import { getId, getIcon, getTitle, getDescriptionComponent } from '../../../utils/get-data-with-defval';
+import { getId, getIcon, getTitle, getDescriptionComponent } from '../../../utils/defval/get-data-with-defval';
+
+ListBox.propTypes = {
+    listBox: array.isRequired,
+    baseDescComponent: object,
+    isActive: bool,
+    prop: object
+};
 
 export default function ListBox({ listBox, baseDescComponent, prop, isActive }) {
 
     return (
-        <div className="list-box">
+        <div className="category__list">
             {
                 listBox.map(box => {
                     return (
@@ -20,9 +27,9 @@ export default function ListBox({ listBox, baseDescComponent, prop, isActive }) 
                             className="box"
                             style={isActive ? { zoom: prop.zoom, opacity: prop.opacity, backgroundColor: prop.backgroundColor } : { display: 'none' }}
                         >
-                            <div className="main">
+                            <div className="box__icon d-flex-center flex-col">
                                 <i className={getIcon(box)}></i>
-                                <p>{getTitle(box)}</p>
+                                <p className="text-upper">{getTitle(box)}</p>
                             </div>
                             <Description descComponent={getDescriptionComponent(box)} baseDescComponent={baseDescComponent} />
                         </animated.div>
@@ -32,10 +39,3 @@ export default function ListBox({ listBox, baseDescComponent, prop, isActive }) 
         </div>
     );
 }
-
-ListBox.propTypes = {
-    listBox: array.isRequired,
-    baseDescComponent: object,
-    isActive: bool,
-    prop: object
-};

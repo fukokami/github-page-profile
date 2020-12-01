@@ -1,25 +1,13 @@
 'use strict';
 
-import { all, always, compose, concat, converge, identity, ifElse, isNil, join, prop, unapply } from 'ramda';
+import { all, compose, converge, identity, isNil, prop, unapply } from 'ramda';
 
 import React from 'react';
 import { bool, object } from 'prop-types';
 
 
-import { getType, getIcon, getFrameHeader, getValue } from '../../../../utils/get-data-with-defval';
-
-
-const appendClass = (condition, defaultClass = [], appendClass = []) => {
-
-    return compose(
-        join(' '),
-        ifElse(
-            identity,
-            always(defaultClass),
-            always(concat(defaultClass, appendClass))
-        )
-    )(condition);
-};
+import { getType, getIcon, getFrameHeader, getValue } from '../../../../utils/defval/get-data-with-defval';
+import appendClass from '../../../../utils/append-class';
 
 const checkEmpty = converge(
     compose(
@@ -33,6 +21,11 @@ const checkEmpty = converge(
         prop('value'),
     ]
 );
+
+Frame.propTypes = {
+    isReserve: bool,
+    frame: object
+};
 
 export default function Frame({ isReserve, frame }) {
 
@@ -56,8 +49,3 @@ export default function Frame({ isReserve, frame }) {
         )
     );
 }
-
-Frame.propTypes = {
-    isReserve: bool,
-    frame: object
-};

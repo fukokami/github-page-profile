@@ -8,15 +8,11 @@ import TabSelector from './widget/TabSelector.jsx';
 export default function Navbar() {
 
     return (
-        <div className="no-select navbar">
+        <nav className="no-select">
 
-            <div className="avatar-area">
-                <Avatar />
-            </div>
-            
-            <div className="menu-area">
-                <TabSelector />
-            </div>
-        </div>
+            <Avatar />
+
+            <TabSelector />
+        </nav>
     );
 }

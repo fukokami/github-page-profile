@@ -3,7 +3,7 @@
 import { apply, call, compose, converge, identity, juxt, mergeRight, omit } from 'ramda';
 
 
-import buildSpecialData from './special-data/build';
+import buildSpecialData from '../special-data/build';
 
 import getPropWithDefval from './get-prop-with-defval';
 import getPathWithDefval from './get-path-with-defval';
@@ -17,6 +17,7 @@ export const getId = item => {
 export const getTitle = getPropWithDefval('title', 'Unknown');
 export const getList = getPropWithDefval('list', []);
 export const getIcon = getPropWithDefval('icon', 'fa fa-question');
+export const getImage = getPropWithDefval('image', './images/default.jpg');
 export const getValue = getPropWithDefval('value', '???');
 export const getDescription = getPropWithDefval('description', 'Unknown');
 export const getUrl = getPropWithDefval('url', '#/profile');
@@ -51,7 +52,7 @@ export const getPath = compose(
 );
 export const getBaseUrl = getPropWithDefval('base-uri', '');
 export const getProperty = getPropWithDefval('property', '');
-export const getColor = getPropWithDefval('color', 'primary');
+export const getColor = getPropWithDefval('color', 'secondary');
 export const getName = getPropWithDefval('name', 'Unknown');
 export const getJob = getPropWithDefval('job', 'Unknown');
 export const getSocial = getPropWithDefval('social', []);

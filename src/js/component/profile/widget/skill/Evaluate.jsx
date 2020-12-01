@@ -5,32 +5,30 @@ import { range } from 'ramda';
 import React from 'react';
 import { array } from 'prop-types';
 
-import { getId, getValue, getEvaluate, getTitle, getPoint } from '../../../../utils/get-data-with-defval';
+import { getId, getValue, getEvaluate, getTitle, getPoint } from '../../../../utils/defval/get-data-with-defval';
 
 
 const renderEvaluatePoint = (item) => {
 
     const MAX_POINT = 5;
 
-    return getEvaluate(item).map(i => {
-        return (
-            <div key={getId(i)}>
-                <p>{getTitle(i)}</p>
+    return getEvaluate(item).map(
+        evaluate =>
+            <div key={getId(evaluate)}>
+                <p>{getTitle(evaluate)}</p>
                 &nbsp;
                 {
-                    range(1, MAX_POINT + 1)
-                        .map(
-                            (item, index) => {
-                                const id = `${getId}-${index}`;
-                                return item < getPoint(i)
-                                    ? <i key={id} className="fas fa-star"></i>
-                                    : <i key={id} className="far fa-star"></i>;
-                            }
-                        )
+                    range(1, MAX_POINT + 1).map(
+                        item => <i key={getId(item)} className={`${item < getPoint(evaluate) ? 'fas' : 'far'} fa-star`}></i>
+                    )
                 }
             </div>
-        );
-    });
+    );
+};
+
+
+Evaluate.propTypes = {
+    evaluateList: array
 };
 
 export default function Evaluate({ evaluateList }) {
@@ -38,8 +36,8 @@ export default function Evaluate({ evaluateList }) {
     return (
         <div className="evaluate-area">
             {
-                evaluateList.map(item => {
-                    return (
+                evaluateList.map(
+                    item =>
                         <div key={getId(item)} className="evaluate">
                             <p>{getValue(item)}</p>
                             <div className="point">
@@ -48,13 +46,8 @@ export default function Evaluate({ evaluateList }) {
                                 }
                             </div>
                         </div>
-                    );
-                })
+                )
             }
         </div>
     );
 }
-
-Evaluate.propTypes = {
-    evaluateList: array
-};

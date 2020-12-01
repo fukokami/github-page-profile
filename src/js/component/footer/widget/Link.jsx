@@ -7,7 +7,7 @@ import React from 'react';
 
 import { getFooterLink } from '../../../ajax/get-footer';
 
-import { getId, getList, getTitle, getUrl } from '../../../utils/get-data-with-defval';
+import { getId, getList, getTitle, getUrl } from '../../../utils/defval/get-data-with-defval';
 
 
 const listLink = getFooterLink();
@@ -24,35 +24,26 @@ const getCustomList = compose(
 );
 
 
-const renderItem = items => {
-    return (
-        items.map(item =>
-            (
-                <li key={getId(item)}>
-                    <a href={getUrl(item)}>{getTitle(item)}</a>
-                </li>
-            )
-        )
-    );
-};
 
 export default function Link() {
 
     return (
-        <div className="useful-link">
+        <div className="flex-1 text-left">
             <h3>{getTitle(listLink)}</h3>
-            <hr />
-            <div className="list-link">
+            <hr className="mr-a" />
+            <div className="d-flex">
                 {
-                    getCustomList(listLink).map(link => {
-                        return (
-                            <ul key={getId(link)}>
+                    getCustomList(listLink).map(
+                        chunkedLinks => (
+                            <div key={getId(chunkedLinks)} className="flex-1">
                                 {
-                                    renderItem(link)
+                                    chunkedLinks.map(
+                                        link => <a key={getId(link)} className="d-block p-5" href={getUrl(link)} > {getTitle(link)}</a>
+                                    )
                                 }
-                            </ul>
-                        );
-                    })
+                            </div>
+                        )
+                    )
                 }
             </div>
         </div>

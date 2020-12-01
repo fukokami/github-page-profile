@@ -4,10 +4,10 @@
 import { concat, partialRight, unless } from 'ramda';
 
 import React, { useEffect, useState } from 'react';
-import PropTypes from 'prop-types';
+import { object } from 'prop-types';
 
-import { getBaseUrl, getIcon, getPath, getProperty, getValue } from '../../../utils/get-data-with-defval';
-import getPropWithDefval from '../../../utils/get-prop-with-defval';
+import { getBaseUrl, getColor, getIcon, getPath, getProperty, getValue } from '../../../utils/defval/get-data-with-defval';
+import getPropWithDefval from '../../../utils/defval/get-prop-with-defval';
 import { isNumeric, shortenNumber } from '../../../utils/number-format';
 
 import cache from '../../../ajax/api/cache';
@@ -15,8 +15,11 @@ import fetchApi from '../../../ajax/api/fetch-api';
 import Axios from 'axios';
 import { compose } from 'redux';
 
-
 const ONE_DAY = 864E5;
+
+InfoBox.propTypes = {
+    infoBox: object
+};
 
 export default function InfoBox({ infoBox }) {
 
@@ -57,14 +60,11 @@ export default function InfoBox({ infoBox }) {
         return () => source.cancel();
 
     }, [infoBox]);
+
     return (
-        <div className="option-box">
-            <i className={getIcon(infoBox)}></i>
+        <div className="box__info">
+            <i className={`${getIcon(infoBox)} ${getColor(infoBox)}`}></i>
             <div>{val}</div>
         </div>
     );
 }
-
-InfoBox.propTypes = {
-    infoBox: PropTypes.object
-};
