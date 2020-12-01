@@ -1,9 +1,7 @@
 'use strict';
 
-
 import { and, constructN, curry, equals, head, or, test } from 'ramda';
 import tabList from '../constants/tabList';
-
 
 const homeTab = head(tabList);
 

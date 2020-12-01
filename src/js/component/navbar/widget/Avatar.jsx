@@ -1,6 +1,5 @@
 'use strict';
 
-
 import React from 'react';
 
 import Image from './avatar/Image.jsx';

@@ -1,6 +1,5 @@
 'use strict';
 
-
 import { always, and, compose, equals, head, ifElse, last, length, path, pipe, split, tail } from 'ramda';
 
 import React from 'react';
@@ -12,7 +11,6 @@ import { STORAGE } from '../../constants/tabList';
 
 import { getStorageDetail } from '../../ajax/get-storage';
 import { getId, getListBox, getDescriptionComponent } from '../../utils/defval/get-data-with-defval';
-
 
 const getDetailPath =
     compose(

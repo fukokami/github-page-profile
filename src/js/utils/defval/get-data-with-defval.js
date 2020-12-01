@@ -2,7 +2,6 @@
 
 import { apply, call, compose, converge, identity, juxt, mergeRight, omit } from 'ramda';
 
-
 import buildSpecialData from '../special-data/build';
 
 import getPropWithDefval from './get-prop-with-defval';

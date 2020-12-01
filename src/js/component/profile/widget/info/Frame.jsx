@@ -5,7 +5,6 @@ import { all, compose, converge, identity, isNil, prop, unapply } from 'ramda';
 import React from 'react';
 import { bool, object } from 'prop-types';
 
-
 import { getType, getIcon, getFrameHeader, getValue } from '../../../../utils/defval/get-data-with-defval';
 import appendClass from '../../../../utils/append-class';
 

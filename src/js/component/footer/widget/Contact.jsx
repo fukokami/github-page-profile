@@ -1,12 +1,10 @@
 'use strict';
 
-
 import React from 'react';
 
 import { getFooterContact } from '../../../ajax/get-footer';
 
 import { getId, getTitle, getList, getIcon, getValue } from '../../../utils/defval/get-data-with-defval';
-
 
 const contact = getFooterContact();
 

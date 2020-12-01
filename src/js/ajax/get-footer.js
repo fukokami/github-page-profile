@@ -1,6 +1,5 @@
 'use strict';
 
-
 import { compose, defaultTo, path } from 'ramda';
 
 import data from './data/data.yaml';

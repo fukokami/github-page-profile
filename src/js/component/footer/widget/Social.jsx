@@ -1,12 +1,10 @@
 'use strict';
 
-
 import React from 'react';
 
 import { getFooterSocial } from '../../../ajax/get-footer';
 
 import { getId, getIcon, getColor, getUrl } from '../../../utils/defval/get-data-with-defval';
-
 
 const socialList = getFooterSocial();
 

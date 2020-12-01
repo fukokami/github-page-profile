@@ -1,6 +1,5 @@
 'use strict';
 
-
 import { concat, partialRight, unless } from 'ramda';
 
 import React, { useEffect, useState } from 'react';

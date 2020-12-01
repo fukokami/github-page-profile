@@ -1,6 +1,5 @@
 'use strict';
 
-
 import React from 'react';
 
 import Info from './widget/Info.jsx';

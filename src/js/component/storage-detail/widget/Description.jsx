@@ -1,6 +1,5 @@
 'use strict';
 
-
 import { concat, mergeRight, partialRight } from 'ramda';
 
 import React, { useEffect, useState } from 'react';
@@ -13,7 +12,6 @@ import cache from '../../../ajax/api/cache';
 import fetchApi from '../../../ajax/api/fetch-api';
 import Axios from 'axios';
 
-
 const ONE_DAY = 864E5;
 
 Description.propTypes = {
@@ -24,7 +22,6 @@ Description.propTypes = {
 export default function Description({ descComponent, baseDescComponent }) {
 
     const [desc, setDesc] = useState('Loading ...');
-
 
     useEffect(() => {
         const source = Axios.CancelToken.source();

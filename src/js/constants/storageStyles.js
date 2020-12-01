@@ -1,6 +1,5 @@
 'use strict';
 
-
 // Category
 const CATEGORY_INACTIVE_HEIGHT = '4em';
 const CATEGORY_INACTIVE_ZOOM = 3;

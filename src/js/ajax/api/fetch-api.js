@@ -1,6 +1,5 @@
 'use strict';
 
-
 import Axios from 'axios';
 
 const fetchApi = async (url, options = {}) => {

@@ -1,6 +1,5 @@
 'use strict';
 
-
 const _default = (year, month, day, separate) => `${year}${separate}${month}${separate}${day}`;
 const _VNT = (year, month, day, separate) => `${day}${separate}${month}${separate}${year}`;
 
@@ -26,6 +25,5 @@ const format = (format = 'default', after = 0, from = null, separate = '-') => {
             return _default(year, month, day, separate);
     }
 };
-
 
 export default format;

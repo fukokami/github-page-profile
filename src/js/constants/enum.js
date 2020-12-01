@@ -1,6 +1,5 @@
 'use strict';
 
-
 /* *** Profile *** */
 export const INFO = 'info';
 export const SKILL = 'skill';

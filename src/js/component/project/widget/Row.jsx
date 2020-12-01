@@ -1,6 +1,5 @@
 'use strict';
 
-
 import { compose, join, juxt } from 'ramda';
 
 import React from 'react';

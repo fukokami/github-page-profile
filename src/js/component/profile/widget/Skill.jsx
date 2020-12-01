@@ -1,6 +1,5 @@
 'use strict';
 
-
 import { always, cond, propEq, T } from 'ramda';
 
 import React from 'react';

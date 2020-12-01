@@ -1,6 +1,5 @@
 'use strict';
 
-
 import { SELECT_TAB } from '../constants/actionTypes';
 import actionCreator from './actionCreator';
 

@@ -1,11 +1,9 @@
 'use strict';
 
-
 import { head } from 'ramda';
 
 import { SELECT_TAB } from '../constants/actionTypes';
 import tabList from '../constants/tabList';
-
 
 const initTab = head(tabList);
 

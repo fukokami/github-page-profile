@@ -1,6 +1,5 @@
 'use strict';
 
-
 import getPropWithDefval from '../defval/get-prop-with-defval';
 
 const generateStyles = (state, style, options = {}) => {

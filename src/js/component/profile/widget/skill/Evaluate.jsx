@@ -7,7 +7,6 @@ import { array } from 'prop-types';
 
 import { getId, getValue, getEvaluate, getTitle, getPoint } from '../../../../utils/defval/get-data-with-defval';
 
-
 const renderEvaluatePoint = (item) => {
 
     const MAX_POINT = 5;
@@ -25,7 +24,6 @@ const renderEvaluatePoint = (item) => {
             </div>
     );
 };
-
 
 Evaluate.propTypes = {
     evaluateList: array

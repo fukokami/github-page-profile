@@ -1,6 +1,5 @@
 'use strict';
 
-
 import { compose, converge, divide, identity, length, pipe, splitAt, __ } from 'ramda';
 
 import React from 'react';
@@ -8,7 +7,6 @@ import React from 'react';
 import { getFooterLink } from '../../../ajax/get-footer';
 
 import { getId, getList, getTitle, getUrl } from '../../../utils/defval/get-data-with-defval';
-
 
 const listLink = getFooterLink();
 
@@ -22,8 +20,6 @@ const getCustomList = compose(
     ),
     getList
 );
-
-
 
 export default function Link() {
 

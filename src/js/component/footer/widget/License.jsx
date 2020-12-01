@@ -1,6 +1,5 @@
 'use strict';
 
-
 import React from 'react';
 
 import scrollToTop from '../../../utils/scroll-to-top';

@@ -1,6 +1,5 @@
 'use strict';
 
-
 import { curry } from 'ramda';
 
 import generateStyles from './generate-styles';

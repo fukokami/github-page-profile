@@ -2,9 +2,7 @@
 
 import { apply, compose, converge, identity, map, replace, split, tail, trim } from 'ramda';
 
-
 import dateFormat from '../date/date-format';
-
 
 const generateTime =
     converge(

@@ -1,6 +1,5 @@
 'use strict';
 
-
 import { compose, converge, map, mergeRight, omit, useWith as ramdaUseWith } from 'ramda';
 
 import React from 'react';
@@ -10,7 +9,6 @@ import Description from './Description.jsx';
 import InfoBox from './InfoBox.jsx';
 
 import { getIcon, getId, getTitle, getOption, getDescriptionComponent, getColor, getMoreInfoComponent } from '../../../utils/defval/get-data-with-defval';
-
 
 const getListBoxInfo =
     compose(

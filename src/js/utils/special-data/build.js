@@ -29,7 +29,6 @@ const generateSpecialData = cond([
     [T, identity]
 ]);
 
-
 const build = compose(
     (arr) => {
         if (arr.length > 0)

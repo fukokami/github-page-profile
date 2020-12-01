@@ -1,6 +1,5 @@
 'use strict';
 
-
 import { compose, prop } from 'ramda';
 
 import React, { useEffect } from 'react';
@@ -23,7 +22,6 @@ const selectTabAction = compose(
     selectTab,
     prop('pathname'),
 );
-
 
 export default function App() {
 

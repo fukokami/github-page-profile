@@ -1,6 +1,5 @@
 'use strict';
 
-
 import React, { useState } from 'react';
 import { useSprings, animated, config } from 'react-spring';
 

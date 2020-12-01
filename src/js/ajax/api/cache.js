@@ -1,6 +1,5 @@
 'use strict';
 
-
 import { curry, subtract } from 'ramda';
 
 const cache = curry(

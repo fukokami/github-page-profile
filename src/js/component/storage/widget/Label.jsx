@@ -1,6 +1,5 @@
 'use strict';
 
-
 import { path } from 'ramda';
 
 import React, { useEffect } from 'react';
