@@ -26,7 +26,7 @@ body {
 
 .page-content {
   flex: 1;
-  max-width: 1024px;
+  max-width: $pc-screen;
   margin: 0 auto;
   width: 100%;
 }

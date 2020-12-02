@@ -190,4 +190,85 @@ nav {
       text-shadow: 0 0 10px white, 0 0 20px white, 0 0 40px white, 0 0 80px white, 0 0 160px white;
     }
   }
+
+  .menu {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+
+    display: none;
+
+    font-size: $font-size-large;
+
+    z-index: 3;
+  }
+}
+
+@media screen and (max-width: $tablet-screen) {
+  nav {
+    height: 15em;
+
+    .avatar {
+      left: 0;
+      right: 0;
+      top: 0;
+
+      width: 13em;
+      height: 13em;
+      margin: 1em auto;
+
+      border-radius: 50%;
+
+      .avatar__icons {
+        display: none;
+      }
+
+      .avatar__details {
+        border-radius: 0;
+      }
+    }
+
+    .tab-selector {
+      position: absolute;
+      left: -100%;
+      top: 0;
+      right: unset;
+      bottom: unset;
+
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      height: 100%;
+      width: 100%;
+      margin: auto;
+
+      border-radius: 0;
+      background: $secondary-color;
+
+      z-index: 2;
+      text-align: center;
+      backdrop-filter: none;
+    }
+
+    .menu {
+      display: unset;
+    }
+  }
+}
+
+@media screen and (max-width: $mobile-screen) {
+  nav {
+    height: 10em;
+
+    .avatar {
+      left: 0;
+      right: 0;
+      top: 0;
+
+      width: 8em;
+      height: 8em;
+      margin: 1em auto;
+    }
+  }
 }

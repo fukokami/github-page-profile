@@ -80,7 +80,7 @@
           -webkit-box-orient: vertical;
         }
 
-        @media screen and (max-width: 425px) {
+        @media screen and (max-width: $mobile-screen) {
           .box__description {
             display: none;
           }
@@ -137,7 +137,7 @@
         }
       }
 
-      @media screen and (max-width: 1028px) {
+      @media screen and (max-width: $pc-screen) {
         .label__sub {
           max-width: 33em;
         }

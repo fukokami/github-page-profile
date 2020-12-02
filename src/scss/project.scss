@@ -96,7 +96,7 @@
     }
   }
 
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: $tablet-screen) {
     .timeline,
     .timeline:nth-child(even) {
       width: 100%;

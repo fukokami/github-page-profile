@@ -12,6 +12,10 @@
   display: flex;
 }
 
+.d-inline-flex {
+  display: flex !important;
+}
+
 .d-block {
   display: block;
 }
