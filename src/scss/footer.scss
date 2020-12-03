@@ -68,12 +68,12 @@ footer {
     max-width: 16em;
     height: 19em;
 
-    border-radius: 1em;
-    background: $primary-color;
+    background: $secondary-color;
+    box-shadow: 10px 10px $complementary-color;
     align-items: center;
 
     img {
-      width: 18em;
+      width: 16em;
       max-height: 13em;
     }
   }
@@ -113,6 +113,26 @@ footer {
     &:hover {
       background: #fff9af;
       color: black;
+    }
+  }
+
+  @media screen and (max-width: $tablet-screen) {
+    .footer__social {
+      width: 100%;
+      margin: auto;
+    }
+
+    .footer__content {
+      flex-direction: column;
+
+      h3 {
+        text-align: center;
+        font-size: x-large;
+      }
+
+      hr {
+        width: 100%;
+      }
     }
   }
 }

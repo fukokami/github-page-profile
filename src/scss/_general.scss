@@ -61,6 +61,14 @@
   flex-direction: column;
 }
 
+.flex-row-reserve {
+  flex-direction: row-reverse;
+}
+
+.flex-col-reserve {
+  flex-direction: column-reverse;
+}
+
 // Icons
 
 .circle {
