@@ -10,6 +10,7 @@
   .storage__category {
     position: relative;
 
+    max-height: 21.5em;
     margin: 10px;
     overflow: hidden;
 
@@ -31,11 +32,10 @@
         height: 7em;
         margin: 0.7em 0.7em 0 0;
 
-        border-radius: 1em;
         border: 0.3em double $secondary-color;
 
         .box__icon {
-          width: 7em;
+          width: 10em;
 
           i {
             width: 2.7em;
@@ -50,19 +50,6 @@
 
             text-align: center;
             line-height: 2.7em;
-          }
-
-          p {
-            display: block;
-            width: 7em;
-            margin: 0.2em;
-            overflow: hidden;
-
-            text-align: center;
-            text-overflow: ellipsis;
-            font-size: small;
-            font-weight: bold;
-            white-space: nowrap;
           }
         }
 
@@ -79,15 +66,8 @@
           -webkit-line-clamp: 5;
           -webkit-box-orient: vertical;
         }
-
-        @media screen and (max-width: $mobile-screen) {
-          .box__description {
-            display: none;
-          }
-        }
       }
     }
-
     .category__label {
       position: absolute;
       left: 10px;
@@ -142,6 +122,62 @@
           max-width: 33em;
         }
       }
+
+      @media screen and (max-width: $tablet-screen) {
+        .label__sub {
+          max-width: 25em;
+        }
+      }
+
+      @media screen and (max-width: $mobile-screen) {
+        .label__sub {
+          max-width: 15em;
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: $tablet-screen) {
+    .storage__category {
+      max-height: unset;
+
+      .category__list {
+        margin-left: 1.5em;
+
+        flex-direction: column;
+
+        .box {
+          width: auto;
+          height: 5em;
+
+          padding: 0.4em;
+
+          flex-direction: column;
+
+          .box__description {
+            width: 100%;
+            margin: 0.5em 1em;
+
+            border-top: 3px double black;
+            -webkit-line-clamp: 1;
+          }
+
+          .box__icon {
+            width: 100%;
+
+            flex-direction: row;
+            justify-content: left;
+
+            i {
+              width: 1.7em;
+              height: 1.7em;
+              margin: unset;
+
+              line-height: 1.7em;
+            }
+          }
+        }
+      }
     }
   }
 }
@@ -175,7 +211,8 @@
       transition: box-shadow 0.3s;
 
       &:hover {
-        box-shadow: 0 12px 15px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+        box-shadow: 0 12px 15px 0 rgba(0, 0, 0, 0.24),
+          0 17px 50px 0 rgba(0, 0, 0, 0.19);
       }
 
       &:hover span {

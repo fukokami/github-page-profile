@@ -16,7 +16,7 @@ export default function Icons({ iconList }) {
             {
                 iconList.map(
                     icon =>
-                        <div key={getId(icon)} className="circle font-medium my-5 mr-5">
+                        <div key={getId(icon)} className="circle font-medium my-5 mr-5 b-black">
                             <i className={getIcon(icon)}></i>
                         </div>
                 )

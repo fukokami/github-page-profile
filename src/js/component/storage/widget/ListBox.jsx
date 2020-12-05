@@ -29,7 +29,7 @@ export default function ListBox({ listBox, baseDescComponent, prop, isActive }) 
                         >
                             <div className="box__icon d-flex-center flex-col">
                                 <i className={getIcon(box)}></i>
-                                <p className="text-upper">{getTitle(box)}</p>
+                                <p className="mx-5 text-upper text-center font-medium">{getTitle(box)}</p>
                             </div>
                             <Description descComponent={getDescriptionComponent(box)} baseDescComponent={baseDescComponent} />
                         </animated.div>

@@ -8,7 +8,7 @@ footer {
 
   font-size: small;
 
-  background: $primary-color;
+  background: $complementary-color;
 
   hr {
     position: relative;
@@ -68,8 +68,8 @@ footer {
     max-width: 16em;
     height: 19em;
 
-    background: $secondary-color;
-    box-shadow: 10px 10px $complementary-color;
+    background: $primary-color;
+    box-shadow: 10px 10px $secondary-color;
     align-items: center;
 
     img {

@@ -4,12 +4,14 @@
 const CATEGORY_INACTIVE_HEIGHT = '4em';
 const CATEGORY_INACTIVE_ZOOM = 3;
 const CATEGORY_INACTIVE_OPACITY = 0;
-const CATEGORY_INACTIVE_BACKGROUND = '#7f8fa6';
+const CATEGORY_INACTIVE_BACKGROUND = '#2f3640';
+const CATEGORY_INACTIVE_RADIUS = '2em';
 
-const CATEGORY_ACTIVE_HEIGHT = '21.5em';
+const CATEGORY_ACTIVE_HEIGHT = '33em';
 const CATEGORY_ACTIVE_ZOOM = 1;
 const CATEGORY_ACTIVE_OPACITY = 1;
-const CATEGORY_ACTIVE_BACKGROUND = '#dcdde1';
+const CATEGORY_ACTIVE_BACKGROUND = '#ffffff';
+const CATEGORY_ACTIVE_RADIUS = '1em';
 
 export const CATEGORY_STYLE = {
     active: {
@@ -17,12 +19,14 @@ export const CATEGORY_STYLE = {
         zoom: CATEGORY_ACTIVE_ZOOM,
         opacity: CATEGORY_ACTIVE_OPACITY,
         backgroundColor: CATEGORY_ACTIVE_BACKGROUND,
+        borderRadius: CATEGORY_ACTIVE_RADIUS,
     },
     inactive: {
         height: CATEGORY_INACTIVE_HEIGHT,
         zoom: CATEGORY_INACTIVE_ZOOM,
         opacity: CATEGORY_INACTIVE_OPACITY,
         backgroundColor: CATEGORY_INACTIVE_BACKGROUND,
+        borderRadius: CATEGORY_INACTIVE_RADIUS,
     }
 };
 

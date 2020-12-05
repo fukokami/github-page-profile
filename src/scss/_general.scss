@@ -6,6 +6,12 @@
   height: 100%;
 }
 
+// Border
+
+.b-black {
+  border: 1px solid black;
+}
+
 // Display
 
 .d-flex {
@@ -72,13 +78,14 @@
 // Icons
 
 .circle {
-  width: 30px;
-  height: 30px;
-  background: white;
-  border-radius: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 30px;
+  height: 30px;
+
+  background: white;
+  border-radius: 50%;
 
   i {
     font-size: 0.8em;
