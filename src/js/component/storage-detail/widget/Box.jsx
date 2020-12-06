@@ -34,6 +34,14 @@ Box.propTypes = {
     baseDescComponent: object,
 };
 
+function NoData() {
+    return (
+        <div className="box__info">
+            <p>No Data</p>
+        </div>
+    );
+}
+
 export default function Box({ box, storageDetail, baseDescComponent }) {
 
     const listInfoBox = getListBoxInfo(storageDetail, box);
@@ -47,9 +55,11 @@ export default function Box({ box, storageDetail, baseDescComponent }) {
 
                 <div className="box__info-list">
                     {
-                        listInfoBox.map(
-                            infoBox => <InfoBox key={getId(infoBox)} infoBox={infoBox} />
-                        )
+                        !listInfoBox.length
+                            ? <NoData />
+                            : listInfoBox.map(
+                                infoBox => <InfoBox key={getId(infoBox)} infoBox={infoBox} />
+                            )
                     }
                 </div>
 
