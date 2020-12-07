@@ -25,7 +25,7 @@ export default function ListBox({ listBox, baseDescComponent, prop, isActive }) 
                         <animated.div
                             key={getId(box)}
                             className="box"
-                            style={isActive ? { zoom: prop.zoom, opacity: prop.opacity, backgroundColor: prop.backgroundColor } : { display: 'none' }}
+                            style={isActive ? { zoom: prop.zoom, opacity: prop.opacity } : { display: 'none' }}
                         >
                             <div className="box__icon d-flex-center flex-col">
                                 <i className={getIcon(box)}></i>

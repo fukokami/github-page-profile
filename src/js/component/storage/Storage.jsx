@@ -39,7 +39,7 @@ export default function Storage() {
                         <animated.div
                             key={getId(item)}
                             className="storage__category"
-                            style={{ height: prop.height, borderRadius: prop.borderRadius }}
+                            style={{ height: prop.height, borderRadius: prop.borderRadius, backgroundColor: prop.backgroundColor }}
                             onClick={categoryOnClick(index)}
                         >
                             <ListBox listBox={getListBox(item)} baseDescComponent={getDescriptionComponent(item)} prop={prop} isActive={isActive} />

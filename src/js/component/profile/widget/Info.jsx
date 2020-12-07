@@ -2,6 +2,7 @@
 
 import React from 'react';
 import { array } from 'prop-types';
+import { useMediaQuery } from 'react-responsive';
 
 import Frame from './info/Frame.jsx';
 
@@ -12,6 +13,8 @@ Info.propTypes = {
 };
 
 export default function Info({ infoList }) {
+
+    const isMobile = useMediaQuery({ query: '(max-width: 768px)' });
 
     return (
         <>
@@ -24,7 +27,7 @@ export default function Info({ infoList }) {
                             <div className="bloc">
                                 {
                                     getFrameList(item).map(
-                                        (frame, index) => <Frame key={getId(frame)} isReserve={index % 2 === 1} frame={frame} />
+                                        (frame, index) => <Frame key={getId(frame)} isReserve={!isMobile && index % 2 === 1} frame={frame} />
                                     )
                                 }
                             </div>

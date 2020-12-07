@@ -39,10 +39,10 @@ export default function Label({ item, isActive }) {
             <div className="circle label__icon">
                 <i className={getIcon(item)}></i>
             </div>
-            <div className="d-flex-justify-center flex-col w-100 ml-5">
+            <div className={`d-flex-justify-center flex-col w-100 ml-5 ${isActive ? 'text-black' : 'text-white'}`}>
                 <div className="label__main font-medium">
                     {title}
-                    <Link className="font-size-small text-amethyst" to={url} >More &#8811;</Link>
+                    <Link className={`font-size-small ${isActive ? 'text-black' : 'text-white'}`} to={url} >More &#8811;</Link>
                 </div>
 
                 <animated.div
