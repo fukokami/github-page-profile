@@ -1,5 +1,7 @@
 'use strict';
 
+import { take } from 'ramda';
+
 import React, { useState } from 'react';
 import { useSprings, animated, config } from 'react-spring';
 
@@ -13,6 +15,8 @@ import { CATEGORY_STYLE } from '../../constants/storageStyles';
 import generateStyleWithConfig from '../../utils/animate/generate-styles-with-config';
 
 const setCategoryAnimation = generateStyleWithConfig(CATEGORY_STYLE, { config: config.gentle });
+
+const MAX_ITEM = 4;
 
 export default function Storage() {
 
@@ -42,7 +46,7 @@ export default function Storage() {
                             style={{ height: prop.height, borderRadius: prop.borderRadius, backgroundColor: prop.backgroundColor }}
                             onClick={categoryOnClick(index)}
                         >
-                            <ListBox listBox={getListBox(item)} baseDescComponent={getDescriptionComponent(item)} prop={prop} isActive={isActive} />
+                            <ListBox listBox={take(MAX_ITEM, getListBox(item))} baseDescComponent={getDescriptionComponent(item)} prop={prop} isActive={isActive} />
                             <Label item={item} isActive={isActive} />
                         </animated.div>
                     );

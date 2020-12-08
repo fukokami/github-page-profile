@@ -5,7 +5,10 @@ import { range } from 'ramda';
 import React from 'react';
 import { array } from 'prop-types';
 
-import { getId, getValue, getEvaluate, getTitle, getPoint } from '../../../../utils/defval/get-data-with-defval';
+import getPropWithDefval from '../../../../utils/defval/get-prop-with-defval';
+import { getId, getValue, getEvaluate, getPoint } from '../../../../utils/defval/get-data-with-defval';
+
+const getTitleCustom = getPropWithDefval('title', '');
 
 const renderEvaluatePoint = (item) => {
 
@@ -14,10 +17,10 @@ const renderEvaluatePoint = (item) => {
     return getEvaluate(item).map(
         evaluate =>
             <div key={getId(evaluate)}>
-                <p>{getTitle(evaluate)}</p>
+                <p>{getTitleCustom(evaluate)}</p>
                 &nbsp;
                 {
-                    range(1, MAX_POINT + 1).map(
+                    range(0, MAX_POINT).map(
                         item => <i key={getId(item)} className={`${item < getPoint(evaluate) ? 'fas' : 'far'} fa-star`}></i>
                     )
                 }

@@ -12,14 +12,14 @@ export default function Social() {
 
     return (
         <div className="footer__social">
-            <img src="./images/default.jpg" alt="logo" />
+            <img src="./images/lowercase-f-512.webp" alt="logo" />
             <br />
             <p className="w-100 mx-5 font-size-medium text-left">FOLLOW ME</p>
             <div className="d-flex-space-around w-100">
                 {
                     socialList.map(
                         social => (
-                            <a key={getId(social)} href={getUrl(social)} className={`circle font-size-large white ${getColor(social)}`}>
+                            <a key={getId(social)} href={getUrl(social)} className={`circle font-size-large text-white ${getColor(social)}`}>
                                 <i className={getIcon(social)}></i>
                             </a>
                         )

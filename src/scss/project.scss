@@ -45,6 +45,17 @@
       border: 0.3em double $secondary-color;
       border-radius: 5em 1em 1em 5em;
     }
+
+    pre {
+      overflow-x: auto;
+
+      white-space: pre-wrap;
+      word-wrap: break-word;
+
+      white-space: -moz-pre-wrap;
+      white-space: -pre-wrap;
+      white-space: -o-pre-wrap;
+    }
   }
 
   .timeline__icon {

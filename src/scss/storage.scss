@@ -14,6 +14,8 @@
     margin: 10px;
     overflow: hidden;
 
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.5);
+ 
     cursor: pointer;
     background-color: $secondary-color;
     border-radius: 2em;
@@ -208,8 +210,7 @@
       border-radius: 12px;
       border-bottom: 3px groove $secondary-color;
       transition: box-shadow 0.3s;
-      box-shadow: 0 12px 15px 0 rgba(218, 218, 218, 0.24),
-        0 17px 50px 0 rgba(218, 218, 218, 0.19);
+      box-shadow: 0 12px 15px 0 rgba(218, 218, 218, 0.24), 0 17px 50px 0 rgba(218, 218, 218, 0.19);
 
       span {
         display: block;
@@ -250,8 +251,7 @@
       }
 
       &:hover {
-        box-shadow: 0 12px 15px 0 rgba(0, 0, 0, 0.24),
-          0 17px 50px 0 rgba(0, 0, 0, 0.19);
+        box-shadow: 0 12px 15px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
       }
 
       &:hover span {

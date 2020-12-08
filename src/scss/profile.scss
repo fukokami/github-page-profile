@@ -142,23 +142,57 @@
       &.node:hover {
         background: linear-gradient(to bottom right, #6cbc40 0%, #3c823b 100%);
       }
+
       &.php:hover {
         background-color: #697ab1;
       }
+
       &.react:hover {
         background-color: #5ed3f3;
       }
+
+      &.docker:hover {
+        background-color: #2491e5;
+      }
+
       &.android:hover {
         background-color: #30d780;
       }
+
       &.aws:hover {
-        background-color: #061a2d;
+        background-color: #182d38;
       }
+
       &.git:hover {
         background-color: #e94e31;
       }
+
       &.github:hover {
         background-color: #302f2f;
+      }
+
+      &.javascript:hover {
+        background-color: #efd819;
+      }
+
+      &.secondary:hover {
+        background-color: #27ae60;
+      }
+
+      &.vue:hover {
+        background-color: #02bb7c;
+      }
+
+      &.sass:hover {
+        background-color: #c66493;
+      }
+
+      &.css:hover {
+        background-color: #2b99ce;
+      }
+
+      &.html5:hover {
+        background-color: #dd4b25;
       }
 
       &:before,

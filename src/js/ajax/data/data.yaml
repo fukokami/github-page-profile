@@ -10,7 +10,7 @@ user:
     - id: social-github
       name: social github
       icon: fa fa-github-alt
-      url: https://github.com/masterite1996
+      url: https://github.com/fukokami
 
 profile:
   info:
@@ -33,7 +33,7 @@ profile:
             frame-header: Phone
             class-size: half
             icon: fa fa-phone
-            value: +84 (0)398 xxx x96
+            value: +84 (0)398 ••• •96
           - id: 114
             frame-header: Email
             class-size: half
@@ -68,57 +68,71 @@ profile:
         type: badge
         bloc-header: Programing Language
         frame:
-          - id: 211
-            name: nodeJS
-            color: node
-            type: icon
-            icon: fab fa-node
           - id: 212
             name: php
             color: php
             type: icon
             icon: fab fa-php
-          - id: 213
+          - id: 215
+            name: javascript
+            color: javascript
+            type: icon
+            icon: fab fa-js
+          - id: 216
+            name: css
+            color: css
+            type: icon
+            icon: fab fa-css3-alt
+          - id: 217
+            name: html5
+            color: html5
+            type: icon
+            icon: fab fa-html5
+      - id: 21-2
+        type: badge
+        bloc-header: Experience
+        frame:
+          - id: 21-21
             name: reactJS
             color: react
             type: icon
             icon: fab fa-react
-          - id: 214
+          - id: 21-23
+            name: docker
+            color: docker
+            type: icon
+            icon: fab fa-docker
+          - id: 21-22
+            name: nodeJS
+            color: node
+            type: icon
+            icon: fab fa-node
+      - id: 21-1
+        type: badge
+        bloc-header: Knowledge
+        frame:
+          - id: 21-12
+            name: vueJS
+            color: vue
+            type: icon
+            icon: fab fa-vuejs
+          - id: 21-13
             name: android
             color: android
             type: icon
             icon: fab fa-android
-      - id: 22
-        type: evaluate
-        bloc-header: Languages
-        frame:
-          - id: 221
-            value: English
-            evaluate:
-              - id: 2211
-                title: Read
-                point: 3
-              - id: 2212
-                title: Listen
-                point: 2
-              - id: 2213
-                title: Write
-                point: 1
-          - id: 222
-            value: Japanese
-            evaluate:
-              - id: 2211
-                title: Read
-                point: 0
-              - id: 2212
-                title: Listen
-                point: 0
-              - id: 2213
-                title: Write
-                point: 0
+          - id: 21-14
+            name: python
+            type: icon
+            icon: fab fa-python
+          - id: 21-15
+            name: sass
+            color: sass
+            type: icon
+            icon: fab fa-sass
       - id: 23
         type: badge
-        bloc-header: Other
+        bloc-header: Some Service 
         frame:
           - id: 231
             name: aws
@@ -135,43 +149,131 @@ profile:
             color: github
             type: icon
             icon: fab fa-github-square
+      - id: 22
+        type: evaluate
+        bloc-header: Foreign Language
+        frame:
+          - id: 221
+            value: English
+            evaluate:
+              - id: 2211
+                title: Read
+                point: 3
+              - id: 2212
+                title: Listen
+                point: 2
+              - id: 2213
+                title: Write
+                point: 1
 
 project:
   - id: 1
-    name: name 1
+    name: edulab
     style:
       color: yellow
-      icon: fa fa-bolt
+      icon: fa fa-graduation-cap
     card:
-      title: content 1
+      title: Edu lab
       start: 11/11/2019
-      end: 01/01/2020
+      end: 20/12/2019
       icons:
-        - id: project-fb-1
-          name: facebook
-          icon: fab fa-facebook-f
+        - id: project-react-1
+          name: react
+          icon: fab fa-react
         - id: project-git-1
-          name: github
-          icon: fab fa-docker
-      description: Lorem ipsum dolor sit amet consectetur adipisicing elit. Non similique voluptatum amet molestias voluptas nesciunt totam laboriosam odio delectus, animi numquam! Ut eos, minima perspiciatis adipisci nesciunt ratione odio aspernatur.
+          name: git
+          icon: fab fa-git
+      description: "Edulab is a WebApp to teach Japanese for Primary school students in Japan <br>
+      ✨ Location: Support (Front)"
 
   - id: 2
-    name: name 2
+    name: Mi••••ma
     style:
       color: blue
-      icon: fa fa-anchor
+      icon: fas fa-spell-check
     card:
-      title: content 2
-      start: 11/11/2019
-      end: 01/01/2020
+      title: Mi••••ma
+      start: 01/2020
+      end: 03/2020
       icons:
-        - id: project-fb-2
-          name: facebook
-          icon: fab fa-facebook-f
-        - id: project-git-2
-          name: github
+        - id: project-aws-2
+          name: aws
+          icon: fab fa-aws
+        - id: project-react-2
+          name: react
+          icon: fab fa-react
+        - id: project-node
+          name: node
+          icon: fab fa-node
+        - id: project-docker-2
+          name: docker
           icon: fab fa-docker
-      description: Lorem ipsum dolor sit amet consectetur adipisicing elit. Non similique voluptatum amet molestias voluptas nesciunt totam laboriosam odio delectus, animi numquam! Ut eos, minima perspiciatis adipisci nesciunt ratione odio aspernatur.
+        - id: project-git-2
+          name: git
+          icon: fab fa-git
+      description: "Mi••••ma is a tool for SELL team to manager dictionary Bucket on S3<br>
+      ✨ Location: Member (Front & Back)<br>
+      ✨ Learned:
+      <pre>   ✔️ Use S3 to storage Frontend source (React)</pre>
+      <pre>   ✔️ Use Lamda function to create API</pre>
+      <pre>   ✔️ Use Docker to create local enviroment</pre>"
+
+  - id: 3 
+    name: Linkus
+    style:
+      color: blue
+      icon: fas fa-building
+    card:
+      title: Linkus
+      start: 03/2020
+      end: 06/2020
+      icons:
+        - id: project-docker-3
+          name: docker
+          icon: fab fa-docker
+        - id: project-php-3
+          name: php
+          icon: fab fa-php
+        - id: project-vuejs-3
+          name: vuejs
+          icon: fab fa-vuejs
+        - id: project-database-3
+          name: database
+          icon: fas fa-database
+      description: "The website supports Japanese companies and national users 'Linkus' to find jobs in Japan. <br>
+      🌏 Homepage: <a href='https://linku-s.com/' target='_blank'>https://linku-s.com</a><br>
+      ✨ Location: Support (Front & Back)<br>
+      ✨ The project has:
+      <pre>   ✔️ Docker</pre>
+      <pre>   ✔️ Clean Architecture</pre>
+      <pre>   ✔️ SCSS</pre>"
+
+  - id: 4
+    name: O•••••a
+    style:
+      color: blue
+      icon: fas fa-cash-register
+    card:
+      title: O•••••a
+      start: 06/2020
+      end: 12/2020
+      icons:
+        - id: project-docker-4
+          name: docker
+          icon: fab fa-docker
+        - id: project-nodejs-4
+          name: nodejs
+          icon: fab fa-node
+      description: "Get product from Store in Japan, then upload them to Tabao<br>
+      ✨ Location: Member - Reviewer<br>
+      ✨ The project has:
+      <pre>   ✔️ Functional Programing: ramda, point-free, ...</pre>
+      <pre>   ✔️ Build Docker image</pre>
+      <pre>   ✔️ AWS Service: ECS(Fargate), Translate, DynamoDB, S3, Lamda, ...</pre>
+      <pre>   ✔️ Big data (9M item)</pre>
+      Experience work with Taobao:
+      <pre>   ✔️ It takes multiple layers of security to get data: Jushita, Yuchenghe, SLS, ... </pre>
+      <pre>   😡 API Document is 💩</pre>"      
 
 storage:
   - id: 1
@@ -201,28 +303,70 @@ storage:
                 name: star
                 property: star_count
                 icon: far fa-star
-              - id: docker-localstack-option-3
-                name: like
-                type: constant
-                value: like
       - id: docker-node
         name: node
         icon: fab fa-docker
         title: node
         component:
           path: library/node
+          more-info:
+            option:
+              - id: docker-node-option-1
+                name: pull
+                property: pull_count
+                icon: fas fa-download
+              - id: docker-node-option-2
+                name: star
+                property: star_count
+                icon: far fa-star
       - id: docker-php
         name: php
         icon: fab fa-docker
         title: PHP
         component:
           path: library/php
+          more-info:
+            option:
+              - id: docker-php-option-1
+                name: pull
+                property: pull_count
+                icon: fas fa-download
+              - id: docker-php-option-2
+                name: star
+                property: star_count
+                icon: far fa-star
       - id: docker-dynamodb-local
         name: dynamo-local
         icon: fab fa-docker
         title: DynamoDB Local
         component:
           path: amazon/dynamodb-local
+          more-info:
+            option:
+              - id: docker-dynamodb-option-1
+                name: pull
+                property: pull_count
+                icon: fas fa-download
+              - id: docker-dynamodb-option-2
+                name: star
+                property: star_count
+                icon: far fa-star
+      - id: docker-redis
+        name: redis
+        icon: fab fa-docker
+        title: Redis
+        component:
+          path: library/redis
+          more-info:
+            option:
+              - id: docker-redis-option-1
+                name: pull
+                property: pull_count
+                icon: fas fa-download
+              - id: docker-redis-option-2
+                name: star
+                property: star_count
+                icon: far fa-star
   - id: 2
     name: npm
     title: NPM
@@ -258,96 +402,54 @@ storage:
         title: ramda
         component:
           path: ramda
+          more-info:
+            option:
+              - id: node-ramda-option-1
+                base-uri: https://api.npmjs.org/downloads/point/
+                path: <%time.yyyymmdd.7%>:<%time.yyyymmdd.1%>/ramda
+                name: week-download
+                property: downloads
+                icon: fas fa-download
+              - id: node-ramda-option-2
+                name: license
+                property: license
+                icon: fas fa-balance-scale
       - id: npm-underscore
         name: underscore
         icon: fab fa-npm
         title: underscore
         component:
           path: underscore
+          more-info:
+            option:
+              - id: node-underscore-option-1
+                base-uri: https://api.npmjs.org/downloads/point/
+                path: <%time.yyyymmdd.7%>:<%time.yyyymmdd.1%>/underscore
+                name: week-download
+                property: downloads
+                icon: fas fa-download
+              - id: node-underscore-option-2
+                name: license
+                property: license
+                icon: fas fa-balance-scale
       - id: npm-axios
         name: axios
         icon: fab fa-npm
         title: axios
         component:
           path: axios
-
-  - id: 3
-    name: music
-    title: Music
-    description: Lorem ipsum dolor sit amet consectetur adipisicing elit. Non similique voluptatum amet molestias voluptas nesciunt totam laboriosam odio delectus, animi numquam! Ut eos, minima perspiciatis adipisci nesciunt ratione odio aspernatur.
-    icon: fas fa-music
-    list-box:
-      - id: music-1
-        name: n1
-        icon: fas fa-music
-        title: 1 Title
-        component:
-          description:
-            type: constant
-            value: Lorem ipsum dolor sit amet consectetur adipisicing elit. Non similique voluptatum amet molestias voluptas nesciunt totam laboriosam odio delectus, animi numquam! Ut eos, minima perspiciatis adipisci nesciunt ratione odio aspernatur.
-      - id: music-2
-        name: n2
-        icon: fas fa-music
-        title: 2 Title
-        component:
-          description:
-            type: constant
-            value: Lorem ipsum dolor sit amet consectetur adipisicing elit. Non similique voluptatum amet molestias voluptas nesciunt totam laboriosam odio delectus, animi numquam! Ut eos, minima perspiciatis adipisci nesciunt ratione odio aspernatur.
-      - id: music-3
-        name: n3
-        icon: fas fa-music
-        title: 3 Title
-        component:
-          description:
-            type: constant
-            value: Lorem ipsum dolor sit amet consectetur adipisicing elit. Non similique voluptatum amet molestias voluptas nesciunt totam laboriosam odio delectus, animi numquam! Ut eos, minima perspiciatis adipisci nesciunt ratione odio aspernatur.
-      - id: music-4
-        name: n4
-        icon: fas fa-music
-        title: 4 Title
-        component:
-          description:
-            type: constant
-            value: Lorem ipsum dolor sit amet consectetur adipisicing elit. Non similique voluptatum amet molestias voluptas nesciunt totam laboriosam odio delectus, animi numquam! Ut eos, minima perspiciatis adipisci nesciunt ratione odio aspernatur.
-
-  - id: 4
-    name: anime
-    title: Anime
-    description: Lorem ipsum dolor sit amet consectetur adipisicing elit. Non similique voluptatum amet molestias voluptas nesciunt totam laboriosam odio delectus, animi numquam! Ut eos, minima perspiciatis adipisci nesciunt ratione odio aspernatur.
-    icon: fas fa-film
-    list-box:
-      - id: film-1
-        name: n1
-        icon: fas fa-film
-        title: 1 Title
-        component:
-          description:
-            type: constant
-            value: Lorem ipsum dolor sit amet consectetur adipisicing elit. Non similique voluptatum amet molestias voluptas nesciunt totam laboriosam odio delectus, animi numquam! Ut eos, minima perspiciatis adipisci nesciunt ratione odio aspernatur.
-      - id: film-2
-        name: n2
-        icon: fas fa-film
-        title: 2 Title
-        component:
-          description:
-            type: constant
-            value: Lorem ipsum dolor sit amet consectetur adipisicing elit. Non similique voluptatum amet molestias voluptas nesciunt totam laboriosam odio delectus, animi numquam! Ut eos, minima perspiciatis adipisci nesciunt ratione odio aspernatur.
-      - id: film-3
-        name: n3
-        icon: fas fa-film
-        title: 3 Title
-        component:
-          description:
-            type: constant
-            value: Lorem ipsum dolor sit amet consectetur adipisicing elit. Non similique voluptatum amet molestias voluptas nesciunt totam laboriosam odio delectus, animi numquam! Ut eos, minima perspiciatis adipisci nesciunt ratione odio aspernatur.
-      - id: film-4
-        name: n4
-        icon: fas fa-film
-        title: 4 Title
-        component:
-          description:
-            type: constant
-            value: Lorem ipsum dolor sit amet consectetur adipisicing elit. Non similique voluptatum amet molestias voluptas nesciunt totam laboriosam odio delectus, animi numquam! Ut eos, minima perspiciatis adipisci nesciunt ratione odio aspernatur.
+          more-info:
+            option:
+              - id: node-axios-option-1
+                base-uri: https://api.npmjs.org/downloads/point/
+                path: <%time.yyyymmdd.7%>:<%time.yyyymmdd.1%>/axios
+                name: week-download
+                property: downloads
+                icon: fas fa-download
+              - id: node-axios-option-2
+                name: license
+                property: license
+                icon: fas fa-balance-scale
 
 footer:
   social:
@@ -360,7 +462,7 @@ footer:
       name: Github
       color: midnight-blue
       icon: fab fa-github
-      url: https://github.com/masterite1996
+      url: https://github.com/fukokami
     - id: fs-google
       name: Google
       color: google-plus
