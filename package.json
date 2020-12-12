@@ -2,8 +2,10 @@
   "name": "github-page-profile",
   "version": "1.0.0",
   "description": "My profile with Github Page and React",
+  "homepage": "http://fukokami.github.io/github-page-profile",
   "main": "index.js",
   "scripts": {
+    "deploy": "gh-pages -d dist",
     "test": "echo \"Error: no test specified\" && exit 1",
     "lint": "eslint \"**/*.{js,jsx}\" --ignore-pattern node_modules/",
     "build": "webpack",
@@ -40,6 +42,7 @@
     "eslint": "^7.10.0",
     "eslint-plugin-react": "^7.21.3",
     "eslint-plugin-react-hooks": "^4.1.2",
+    "gh-pages": "^3.1.0",
     "js-yaml-loader": "^1.2.2",
     "mini-css-extract-plugin": "^0.8.0",
     "node-sass": "^4.13.1",
