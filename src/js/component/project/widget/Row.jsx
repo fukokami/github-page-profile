@@ -32,7 +32,7 @@ export default function Row({ item }) {
                 </div>
                 <h3 className="font-medium mb-5 text-upper text-secondary">{getCardTitle(item)}</h3>
                 <Icons iconList={getCardIcons(item)} />
-                <p className="font-size-medium text-justify" dangerouslySetInnerHTML={{ __html: getCardDescription(item) }}></p>
+                <p className="font-size-medium text-left" dangerouslySetInnerHTML={{ __html: getCardDescription(item) }}></p>
             </div>
         </div>
     );
